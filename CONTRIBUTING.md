@@ -1,8 +1,3 @@
-<!---
-This file was generated on 2023-04-16T20:53:22+01:00 from the rspec-dev repo.
-DO NOT modify it by hand as your changes will get lost the next time it is generated.
--->
-
 # Contributing
 
 RSpec is a community-driven project that has benefited from improvements from over *500* contributors.
@@ -11,13 +6,13 @@ We welcome contributions from *everyone*. While contributing, please follow the 
 If you'd like to help make RSpec better, here are some ways you can contribute:
 
   - by running RSpec HEAD to help us catch bugs before new releases
-  - by [reporting bugs you encounter](https://github.com/rspec/rspec-expectations/issues/new) with [report template](#report-template)
-  - by [suggesting new features](https://github.com/rspec/rspec-expectations/issues/new)
+  - by [reporting bugs you encounter](https://github.com/rspec/rspec/issues/new) with [report template](#report-template)
+  - by [suggesting new features](https://github.com/rspec/rspec/issues/new)
   - by improving RSpec's Feature or API [documentation](https://rspec.info/documentation/)
   - by improving [RSpec's website](https://rspec.info/) ([source](https://github.com/rspec/rspec.github.io))
-  - by taking part in [feature and issue discussions](https://github.com/rspec/rspec-expectations/issues)
-  - by adding a failing test for reproducible [reported bugs](https://github.com/rspec/rspec-expectations/issues)
-  - by reviewing [pull requests](https://github.com/rspec/rspec-expectations/pulls) and suggesting improvements
+  - by taking part in [feature and issue discussions](https://github.com/rspec/rspec/issues)
+  - by adding a failing test for reproducible [reported bugs](https://github.com/rspec/rspec/issues)
+  - by reviewing [pull requests](https://github.com/rspec/rspec/pulls) and suggesting improvements
   - by [writing code](DEVELOPMENT.md) (no patch is too small! fix typos or bad whitespace)
 
 If you need help getting started, check out the [DEVELOPMENT](DEVELOPMENT.md) file for steps that will get you up and running.
