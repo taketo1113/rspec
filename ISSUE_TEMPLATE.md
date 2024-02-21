@@ -10,6 +10,9 @@ Describe your issue here.
 
 ### Your environment
 * Ruby version:
+* rspec-core version:
+* rspec-expectations version:
+* rspec-mocks version:
 * rspec-support version:
 
 ### Steps to reproduce
