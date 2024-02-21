@@ -1,81 +1,42 @@
-<!---
-This file was generated on 2023-04-16T20:53:21+01:00 from the rspec-dev repo.
-DO NOT modify it by hand as your changes will get lost the next time it is generated.
--->
-
 # Development Setup
 
 Generally speaking, you only need to clone the project and install
-the dependencies with [Bundler](https://bundler.io/). You can either
-get a full RSpec development environment using
-[rspec-dev](https://github.com/rspec/rspec-dev#README) or you can
-set this project up individually.
-
-## Setting up rspec-core individually
-
-For most contributors, setting up the project individually will be simpler.
-Unless you have a specific reason to use rspec-dev, we recommend using this approach.
+the dependencies with [Bundler](https://bundler.io/). 
 
 Clone the repo:
 
 ```
-$ git clone git@github.com:rspec/rspec-core.git
+$ git clone git@github.com:rspec/rspec.git
 ```
 
 Install the dependencies using [Bundler](https://bundler.io/):
 
 ```
-$ cd rspec-core
+$ cd rspec
 $ bundle install
 ```
 
+## Working on an individual library
+
+For most contributors, setting up the project individually will be simpler.
+
+Unless you have a specific reason to use rspec-dev, we recommend using this approach.
 To minimize boot time and to ensure we don't depend upon any extra dependencies
 loaded by Bundler, our CI builds avoid loading Bundler at runtime
 by using Bundler's [`--standalone option`](https://myronmars.to/n/dev-blog/2012/03/faster-test-boot-times-with-bundler-standalone).
+
 While not strictly necessary (many/most of our contributors do not do this!),
 if you want to exactly reproduce our CI builds you'll want to do the same:
 
 ```
-$ bundle install --standalone --binstubs
+$ bundle install --standalone --path <current_lib>/bundle
+$ bundle binstubs --path <current_lib>/bundle/bin
 ```
 
-The `--binstubs` option creates the `bin/rspec` file that, like `bundle exec rspec`, will load
+The `binstubs` option creates the `bin/rspec` file that, like `bundle exec rspec`, will load
 all the versions specified in `Gemfile.lock` without loading bundler at runtime!
 
-## Using rspec-dev
-
-See the [rspec-dev README](https://github.com/rspec/rspec-dev#README)
-for setup instructions.
-
-The rspec-dev project contains many rake tasks for helping manage
-an RSpec development environment, making it easy to do things like:
-
-* Change branches across all repos
-* Update all repos with the latest code from `main`
-* Cut a new release across all repos
-* Push out updated build scripts to all repos
-
-These sorts of tasks are essential for the RSpec maintainers but will
-probably be unnecessary complexity if you're just contributing to one
-repository. If you are getting setup to make your first contribution,
-we recommend you take the simpler route of setting up rspec-core
-individually.
-
-## Gotcha: Version mismatch from sibling repos
-
-The [Gemfile](Gemfile) is designed to be flexible and support using
-the other RSpec repositories either from a local sibling directory
-(e.g. `../rspec-<subproject>`) or, if there is no such directory,
-directly from git. This generally does the "right thing", but can
-be a gotcha in some situations. For example, if you are setting up
-`rspec-core`, and you happen to have an old clone of `rspec-expectations`
-in a sibling directory, it'll be used even though it might be months or
-years out of date, which can cause confusing failures.
-
-To avoid this problem, you can either `export USE_GIT_REPOS=1` to force
-the use of `:git` dependencies instead of local dependencies, or update
-the code in the sibling directory. rspec-dev contains rake tasks to
-help you keep all repos in sync.
+You can also run `bundle install` as normal with the GEMFILE environment variable set to the parent directory.
 
 ## Extra Gems
 
@@ -85,9 +46,9 @@ gem declarations. The `Gemfile` evaluates that file if it exists, and it is git-
 
 # Running the build
 
-The [Travis CI build](https://travis-ci.org/rspec/rspec-core)
+The [CI build](https://github.com/rspec/rspec/actions)
 runs many verification steps to prevent regressions and
-ensure high-quality code. To run the Travis build locally, run:
+ensure high-quality code. To run the build locally, for an individual libraryrun:
 
 ```
 $ script/run_build
