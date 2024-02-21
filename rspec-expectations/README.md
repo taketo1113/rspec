@@ -1,51 +1,11 @@
-# RSpec Expectations [![Build Status](https://github.com/rspec/rspec-expectations/workflows/RSpec%20CI/badge.svg)](https://github.com/rspec/rspec-expectations/actions) [![Code Climate](https://codeclimate.com/github/rspec/rspec-expectations.svg)](https://codeclimate.com/github/rspec/rspec-expectations)
+# RSpec::Expectations
 
-RSpec::Expectations lets you express expected outcomes on an object in an
-example.
+This is the detailed readme for `rspec-expectations`, see also:
 
-```ruby
-expect(account.balance).to eq(Money.new(37.42, :USD))
-```
-
-## Install
-
-If you want to use rspec-expectations with rspec, just install the rspec gem
-and RubyGems will also install rspec-expectations for you (along with
-rspec-core and rspec-mocks):
-
-```shell
-gem install rspec
-```
-
-Want to run against the `main` branch? You'll need to include the dependent
-RSpec repos as well. Add the following to your `Gemfile`:
-
-```ruby
-%w[rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
-  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'main'
-end
-```
-
-If you want to use rspec-expectations with another tool, like Test::Unit,
-Minitest, or Cucumber, you can install it directly:
-
-```shell
-gem install rspec-expectations
-```
-
-## Contributing
-
-Once you've set up the environment, you'll need to cd into the working
-directory of whichever repo you want to work in. From there you can run the
-specs and cucumber features, and make patches.
-
-NOTE: You do not need to use rspec-dev to work on a specific RSpec repo. You
-can treat each RSpec repo as an independent project.
-
-- [Build details](BUILD_DETAIL.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Detailed contributing guide](CONTRIBUTING.md)
-- [Development setup guide](DEVELOPMENT.md)
+* [The combined readme][../README.md]
+* [rspec-core][../rspec-core/README.md]
+* [rspec-mocks][../rspec-mocks/README.md]
+* [rspec-support][../rspec-support/README.md]
 
 ## Basic usage
 
@@ -317,10 +277,3 @@ class MyClass
   end
 end
 ```
-
-## Also see
-
-* [https://github.com/rspec/rspec](https://github.com/rspec/rspec)
-* [https://github.com/rspec/rspec-core](https://github.com/rspec/rspec-core)
-* [https://github.com/rspec/rspec-mocks](https://github.com/rspec/rspec-mocks)
-* [https://github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails)

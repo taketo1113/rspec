@@ -1,23 +1,11 @@
-# rspec-core [![Build Status](https://github.com/rspec/rspec-core/workflows/RSpec%20CI/badge.svg)](https://github.com/rspec/rspec-core/actions) [![Code Climate](https://codeclimate.com/github/rspec/rspec-core.svg)](https://codeclimate.com/github/rspec/rspec-core)
+# RSpec::Core
 
-rspec-core provides the structure for writing executable examples of how your
-code should behave, and an `rspec` command with tools to constrain which
-examples get run and tailor the output.
+This is the detailed readme for `rspec-core`, see also:
 
-## Install
-
-    gem install rspec      # for rspec-core, rspec-expectations, rspec-mocks
-    gem install rspec-core # for rspec-core only
-    rspec --help
-
-Want to run against the `main` branch? You'll need to include the dependent
-RSpec repos as well. Add the following to your `Gemfile`:
-
-```ruby
-%w[rspec rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
-  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'main'
-end
-```
+* [The combined readme][../README.md]
+* [rspec-expectations][../rspec-expectations/README.md]
+* [rspec-mocks][../rspec-mocks/README.md]
+* [rspec-support][../rspec-support/README.md]
 
 ## Basic Structure
 
@@ -366,24 +354,3 @@ Calculator
 Finished in 0.000379 seconds
 1 example, 0 failures
 ```
-
-## Contributing
-
-Once you've set up the environment, you'll need to cd into the working
-directory of whichever repo you want to work in. From there you can run the
-specs and cucumber features, and make patches.
-
-NOTE: You do not need to use rspec-dev to work on a specific RSpec repo. You
-can treat each RSpec repo as an independent project.
-
-* [Build details](BUILD_DETAIL.md)
-* [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Detailed contributing guide](CONTRIBUTING.md)
-* [Development setup guide](DEVELOPMENT.md)
-
-## Also see
-
-* [https://github.com/rspec/rspec-metagem](https://github.com/rspec/rspec-metagem)
-* [https://github.com/rspec/rspec-expectations](https://github.com/rspec/rspec-expectations)
-* [https://github.com/rspec/rspec-mocks](https://github.com/rspec/rspec-mocks)
-* [https://github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails)

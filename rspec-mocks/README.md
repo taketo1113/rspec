@@ -1,35 +1,11 @@
-# RSpec Mocks [![Build Status](https://github.com/rspec/rspec-mocks/workflows/RSpec%20CI/badge.svg)](https://github.com/rspec/rspec-mocks/actions) [![Code Climate](https://codeclimate.com/github/rspec/rspec-mocks.svg)](https://codeclimate.com/github/rspec/rspec-mocks)
-rspec-mocks is a test-double framework for rspec with support for method stubs,
-fakes, and message expectations on generated test-doubles and real objects
-alike.
+# RSpec::Mocks
 
-## Install
+This is the detailed readme for `rspec-mocks`, see also:
 
-    gem install rspec       # for rspec-core, rspec-expectations, rspec-mocks
-    gem install rspec-mocks # for rspec-mocks only
-
-Want to run against the `main` branch? You'll need to include the dependent
-RSpec repos as well. Add the following to your `Gemfile`:
-
-```ruby
-%w[rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
-  gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'main'
-end
-```
-## Contributing
-
-Once you've set up the environment, you'll need to cd into the working
-directory of whichever repo you want to work in. From there you can run the
-specs and cucumber features, and make patches.
-
-NOTE: You do not need to use rspec-dev to work on a specific RSpec repo. You
-can treat each RSpec repo as an independent project.
-
-For information about contributing to RSpec, please refer to the following markdown files:
-* [Build details](BUILD_DETAIL.md)
-* [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Detailed contributing guide](CONTRIBUTING.md)
-* [Development setup guide](DEVELOPMENT.md)
+* [The combined readme][../README.md]
+* [rspec-core][../rspec-core/README.md]
+* [rspec-expectations][../rspec-expectations/README.md]
+* [rspec-support][../rspec-support/README.md]
 
 ## Test Doubles
 
@@ -456,10 +432,3 @@ you are interested in learning more, here is some recommended reading:
 * Test Double: http://www.martinfowler.com/bliki/TestDouble.html
 * Test Double Patterns: http://xunitpatterns.com/Test%20Double%20Patterns.html
 * Mocks aren't stubs: http://www.martinfowler.com/articles/mocksArentStubs.html
-
-## Also see
-
-* [https://github.com/rspec/rspec](https://github.com/rspec/rspec)
-* [https://github.com/rspec/rspec-core](https://github.com/rspec/rspec-core)
-* [https://github.com/rspec/rspec-expectations](https://github.com/rspec/rspec-expectations)
-* [https://github.com/rspec/rspec-rails](https://github.com/rspec/rspec-rails)
