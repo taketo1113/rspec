@@ -1,20 +1,15 @@
-<!---
-This file was generated on 2023-04-16T20:53:23+01:00 from the rspec-dev repo.
-DO NOT modify it by hand as your changes will get lost the next time it is generated.
--->
-
 # The CI build, in detail
 
-The [Travis CI build](https://travis-ci.org/rspec/rspec-mocks)
+The [CI build](https://github.com/rspec/rspec/actions)
 runs many verification steps to prevent regressions and
-ensure high-quality code. To run the Travis build locally, run:
+ensure high-quality code. To run the build locally, run:
 
 ```
 $ script/run_build
 ```
 
 It can be useful to run the build steps individually
-to repro a failing part of a Travis build. Let's break
+to repro a failing part of a build. Let's break
 the build down into the individual steps.
 
 ## Specs
