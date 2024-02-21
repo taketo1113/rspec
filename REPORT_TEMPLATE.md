@@ -1,8 +1,3 @@
-<!---
-This file was generated on 2023-04-16T20:53:23+01:00 from the rspec-dev repo.
-DO NOT modify it by hand as your changes will get lost the next time it is generated.
--->
-
 # Report template
 
 ```ruby
@@ -18,7 +13,7 @@ end
 gemfile(true) do
   source "https://rubygems.org"
 
-  gem "rspec", "3.7.0" # Activate the gem and version you are reporting the issue against.
+  gem "rspec", "3.13.0" # Activate the gem and version you are reporting the issue against.
 end
 
 puts "Ruby version is: #{RUBY_VERSION}"
