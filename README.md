@@ -1,3 +1,10 @@
+# Work in progress
+
+The monorepo is currently a work in progress, the `dev` branch is essentially `main` post-generation
+but with various dev work rebased on top, it may be rebased WITHOUT WARNING, use at own risk, if you
+want to use the monorepo as your source please use `main` which will only be used as updated from the
+individual repos without rebasing. This branch will be merged when stable.
+
 # rspec [![Build Status](https://github.com/rspec/rspec/workflows/RSpec%20CI/badge.svg)](https://github.com/rspec/rspec/actions) [![Code Climate](https://codeclimate.com/github/rspec/rspec.svg)](https://codeclimate.com/github/rspec/rspec)
 
 This is the RSpec mono repo, it contains the core gems we think of as "rspec", they are:
