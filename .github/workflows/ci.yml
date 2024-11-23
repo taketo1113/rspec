@@ -14,6 +14,9 @@ permissions:
   contents: read
 
 jobs:
+  docs:
+    uses: rspec/rspec/.github/workflows/documentation_coverage.yml@add-simplified-ci
+
   core:
     uses: rspec/rspec/.github/workflows/rspec.yml@add-simplified-ci
     with:
