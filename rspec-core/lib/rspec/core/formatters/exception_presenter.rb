@@ -14,10 +14,7 @@ module RSpec
 
         # We want private attr_reader but that issues a warning on older rubies, refactor later
         #
-        # rubocop:disable Style/AccessModifierDeclarations
         private :message_color, :detail_formatter, :extra_detail_formatter, :backtrace_formatter
-        # rubocop:enable Style/AccessModifierDeclarations
-
         def initialize(exception, example, options={})
           @exception               = exception
           @example                 = example
@@ -62,7 +59,7 @@ module RSpec
 
               unless last_cause.backtrace.nil? || last_cause.backtrace.empty?
                 lines = backtrace_formatter.format_backtrace(last_cause.backtrace, example.metadata)
-                lines = [lines[0]] unless RSpec.configuration.full_cause_backtrace # rubocop:disable Metrics/BlockNesting
+                lines = [lines[0]] unless RSpec.configuration.full_cause_backtrace
 
                 lines.each do |line|
                   cause << ("  #{line}")

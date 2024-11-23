@@ -412,7 +412,6 @@ module RSpec
         attr_reader :orig_object
         attr_writer :expected_received_count, :expected_from, :argument_list_matcher
         protected :expected_received_count=, :expected_from=, :error_generator=, :implementation=
-
         # @private
         attr_reader :type
 

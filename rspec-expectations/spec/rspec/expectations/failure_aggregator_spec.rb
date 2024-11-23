@@ -453,6 +453,8 @@ module RSpec::Expectations
         fail { |e| expect(e.message).to include(yield) }
       end
 
+      # rubocop:disable Lint/DuplicateBranch
+
       # Each Ruby version return a different exception complement.
       # This method gets the current version and return the
       # right complement.
@@ -481,6 +483,7 @@ module RSpec::Expectations
           ":in `Expectations'"
         end
       end
+      # rubocop:enable Lint/DuplicateBranch
     end
   end
 end

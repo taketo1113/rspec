@@ -58,6 +58,8 @@ module RSpec
   # built-in matchers that ship with rspec-expectations, and how to write your
   # own custom matchers.
   module Expectations
+    # rubocop:disable Lint/InheritException
+
     # Exception raised when an expectation fails.
     #
     # @note We subclass Exception so that in a stub implementation if
@@ -66,6 +68,7 @@ module RSpec
     # @api public
     class ExpectationNotMetError < Exception
     end
+    # rubocop:enable Lint/InheritException
 
     # Exception raised from `aggregate_failures` when multiple expectations fail.
     #

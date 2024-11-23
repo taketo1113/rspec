@@ -95,4 +95,6 @@ module RSpec
 end
 
 # Capture main without an eval.
+# rubocop:disable Style/RedundantConstantBase
 ::RSpec::Core::DSL.top_level = self
+# rubocop:enable Style/RedundantConstantBase

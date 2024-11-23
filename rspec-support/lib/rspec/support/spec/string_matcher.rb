@@ -31,7 +31,9 @@ RSpec::Matchers.define :be_identical_string do |expected|
     end
   else
     match do
+      # rubocop:disable Style/StringChars,Style/RedundantRegexpArgument
       actual.split(//) == expected.split(//)
+      # rubocop:enable Style/StringChars,Style/RedundantRegexpArgument
     end
 
     failure_message do

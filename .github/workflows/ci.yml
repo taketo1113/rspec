@@ -17,6 +17,9 @@ jobs:
   docs:
     uses: rspec/rspec/.github/workflows/documentation_coverage.yml@dev
 
+  rubocop:
+    uses: rspec/rspec/.github/workflows/rubocop.yml@add-rubocop
+
   core:
     uses: rspec/rspec/.github/workflows/rspec.yml@dev
     with:

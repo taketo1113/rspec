@@ -985,6 +985,7 @@ module RSpec
     end
 
     # @api private
+    # rubocop:disable Lint/IneffectiveAccessModifier
     def self.is_a_matcher?(obj)
       return true  if ::RSpec::Matchers::BuiltIn::BaseMatcher === obj
       begin
@@ -1008,6 +1009,7 @@ module RSpec
     def self.is_a_describable_matcher?(obj)
       is_a_matcher?(obj) && obj.respond_to?(:description)
     end
+    # rubocop:enable Lint/IneffectiveAccessModifier
 
     class << self
       private

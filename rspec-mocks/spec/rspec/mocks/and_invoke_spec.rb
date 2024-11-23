@@ -19,7 +19,9 @@ module RSpec
 
       context 'when a non-callable are passed in any position' do
         let(:non_callable) { nil }
+        # rubocop:disable Style/NilLambda
         let(:callable) { lambda { nil } }
+        # rubocop:enable Style/NilLambda
 
         it 'raises ArgumentError' do
           error = [ArgumentError, "Arguments to `and_invoke` must be callable."]

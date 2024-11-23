@@ -27,9 +27,11 @@ RSpec.describe "passing spec" do
     expect(1).to eq(1)
   end
 
+  # rubocop:disable Lint/EmptyBlock
   it 'passes with a multiple
      line description' do
   end
+  # rubocop:enable Lint/EmptyBlock
 end
 
 RSpec.describe "failing spec" do

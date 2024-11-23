@@ -152,7 +152,6 @@ module RSpec
         true
       end
       module_function :surface_descriptions_in, :should_enumerate?, :unreadable_io?
-
       # Wraps an item in order to surface its `description` via `inspect`.
       # @api private
       DescribableItem = Struct.new(:item) do

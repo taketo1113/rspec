@@ -39,6 +39,8 @@ gem 'contracts', '< 0.16' if RUBY_VERSION < '1.9.2'
 
 gem 'drb' if RUBY_VERSION >= '3.3'
 
+# Rubocop can't seem to understand this isn't duplicated
+# rubocop:disable Lint/DuplicateBranch
 if RUBY_VERSION < '2.3.0' && !!(RbConfig::CONFIG['host_os'] =~ /cygwin|mswin|mingw|bccwin|wince|emx/)
   gem "childprocess", "< 1.0.0"
 elsif RUBY_VERSION < '2.0.0'
@@ -48,6 +50,7 @@ elsif RUBY_VERSION < '2.3.0'
 else
   gem "childprocess", ">= 3.0.0"
 end
+# rubocop:enable Lint/DuplicateBranch
 
 if RUBY_VERSION < '2.0.0'
   gem 'cucumber', "<= 1.3.22"
@@ -105,8 +108,8 @@ end
 gem "rr", "~> 1.0.4"
 
 # No need to run rubocop on earlier versions
-if RUBY_VERSION >= '2.4' && RUBY_ENGINE == 'ruby'
-  gem "rubocop", "~> 1.0", "< 1.12"
+if RUBY_VERSION >= '3.3' && RUBY_ENGINE == 'ruby'
+  gem "rubocop", "~> 1.69"
 end
 
 gem 'test-unit', '~> 3.0' if RUBY_VERSION.to_f >= 2.2
