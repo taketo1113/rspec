@@ -42,4 +42,4 @@ jobs:
       - run: ../script/update_rubygems_and_install_bundler
       - run: bundle install --standalone
       - run: bundle binstubs --all
-      - run: ../bin/rspec
+      - run: ../script/run_rspec
