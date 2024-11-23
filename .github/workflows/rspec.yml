@@ -44,3 +44,4 @@ jobs:
       - run: bundle binstubs --all
       - run: ../script/run_rspec
       - run: ../script/run_rspec_one_by_one
+      - run: ../script/run_cucumber
