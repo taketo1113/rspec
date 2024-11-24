@@ -568,8 +568,8 @@ EOS
         # consider inheritance here; each example group level that
         # uses a `let` should get its own `LetDefinitions` module.
         def self.get_constant_or_yield(example_group, name)
-          if example_group.const_defined?(name, (check_ancestors = false))
-            example_group.const_get(name, check_ancestors)
+          if example_group.const_defined?(name, false)
+            example_group.const_get(name, false)
           else
             yield
           end

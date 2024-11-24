@@ -92,7 +92,7 @@ module RSpec
         # @api private
         # @return [String]
         def failure_message_when_negated
-          failure_message.sub(/to respond to/, 'not to respond to')
+          failure_message.sub('to respond to', 'not to respond to')
         end
 
         # @api private

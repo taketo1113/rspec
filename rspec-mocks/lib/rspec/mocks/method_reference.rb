@@ -94,7 +94,7 @@ module RSpec
         proxy = RSpec::Mocks.space.proxy_for(object)
         respond_to = proxy.method_double_if_exists_for_message(:respond_to?)
 
-        visible = respond_to && respond_to.original_method.call(method_name) ||
+        visible = (respond_to && respond_to.original_method.call(method_name)) ||
           object.respond_to?(method_name)
 
         return :public if visible

@@ -157,7 +157,7 @@ module RSpec
       private
 
         def ancestor_is_an_observer?(ancestor, method_name)
-          return if ancestor == @klass
+          return false if ancestor == @klass
 
           ::RSpec::Mocks.space.
             any_instance_recorder_for(ancestor).already_observing?(method_name)
