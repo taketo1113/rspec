@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   }
 
   s.files            = `git ls-files -- lib/*`.split("\n")
-  s.files           += ["../LICENSE.md"]
+  s.files           += ["LICENSE.md"]
   s.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.extra_rdoc_files = [ "README.md" ]
