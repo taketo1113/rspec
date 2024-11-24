@@ -157,8 +157,8 @@ module RSpec
         # @api private
         # @return [String]
         def failure_message
-          "expected: #{@operator} #{expected_formatted}\n" \
-          "     got: #{@operator.to_s.gsub(/./, ' ')} #{actual_formatted}"
+          "expected: #{@operator} #{expected_formatted}\n     " \
+            "got: #{@operator.to_s.gsub(/./, ' ')} #{actual_formatted}"
         end
 
         # @api private

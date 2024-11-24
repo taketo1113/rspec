@@ -26,8 +26,8 @@ RSpec.describe RSpec::Mocks do
 
       if RSpec::Support::Ruby.jruby? && JRUBY_VERSION =~ /9\.1\.7\.0/
         before(:example, :description => /spec files/) do
-          pending "JRuby 9.1.7.0 currently generates a circular warning which" \
-                  " is unrelated to our suite."
+          pending "JRuby 9.1.7.0 currently generates a circular warning which " \
+                  "is unrelated to our suite."
         end
       end
 

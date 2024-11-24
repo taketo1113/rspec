@@ -51,7 +51,7 @@ module RSpec
           let(:actual_object) { klass.new }
 
           it "raises ArgumentError" do
-            message = "The be_an_instance_of matcher requires that "\
+            message = "The be_an_instance_of matcher requires that " \
                       "the actual object responds to #instance_of? method " \
                       "but a `NoMethodError` was encountered instead."
             expect {
@@ -74,7 +74,7 @@ module RSpec
           let(:actual_object) { klass.new }
 
           it "raises ArgumentError" do
-            message = "The be_an_instance_of matcher requires that "\
+            message = "The be_an_instance_of matcher requires that " \
                       "the actual object responds to #instance_of? method " \
                       "but a `NoMethodError` was encountered instead."
             expect {

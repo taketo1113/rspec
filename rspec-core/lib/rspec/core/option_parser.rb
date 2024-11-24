@@ -170,8 +170,8 @@ module RSpec::Core
                                            Integer(argument)
                                          rescue ArgumentError
                                            RSpec.warning "Non integer specified as profile count, separate " \
-                                                       "your path from options with -- e.g. " \
-                                                       "`rspec --profile -- #{argument}`",
+                                                         "your path from options with -- e.g. " \
+                                                         "`rspec --profile -- #{argument}`",
                                                          :call_site => nil
                                            true
                                          end

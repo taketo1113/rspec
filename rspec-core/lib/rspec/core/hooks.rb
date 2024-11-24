@@ -593,9 +593,9 @@ module RSpec
             normalized_scope_for(args.shift)
           elsif args.any? { |a| a.is_a?(Symbol) }
             error_message = "You must explicitly give a scope " \
-              "(#{SCOPES.join(", ")}) or scope alias " \
-              "(#{SCOPE_ALIASES.keys.join(", ")}) when using symbols as " \
-              "metadata for a hook."
+                            "(#{SCOPES.join(", ")}) or scope alias " \
+                            "(#{SCOPE_ALIASES.keys.join(", ")}) when using symbols as " \
+                            "metadata for a hook."
             raise ArgumentError.new error_message
           else
             :example

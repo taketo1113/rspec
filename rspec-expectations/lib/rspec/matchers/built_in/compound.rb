@@ -15,9 +15,9 @@ module RSpec
         # @private
         def does_not_match?(_actual)
           raise NotImplementedError, "`expect(...).not_to matcher.#{conjunction} matcher` " \
-            "is not supported, since it creates a bit of an ambiguity. Instead, define negated versions " \
-            "of whatever matchers you wish to negate with `RSpec::Matchers.define_negated_matcher` and " \
-            "use `expect(...).to matcher.#{conjunction} matcher`."
+                                     "is not supported, since it creates a bit of an ambiguity. Instead, define negated versions " \
+                                     "of whatever matchers you wish to negate with `RSpec::Matchers.define_negated_matcher` and " \
+                                     "use `expect(...).to matcher.#{conjunction} matcher`."
         end
 
         # @api private
@@ -95,8 +95,8 @@ module RSpec
 
         def compound_failure_message
           "#{indent_multiline_message(matcher_1.failure_message.sub(/\n+\z/, ''))}" \
-          "\n\n...#{conjunction}:" \
-          "\n\n#{indent_multiline_message(matcher_2.failure_message.sub(/\A\n+/, ''))}"
+            "\n\n...#{conjunction}:" \
+            "\n\n#{indent_multiline_message(matcher_2.failure_message.sub(/\A\n+/, ''))}"
         end
 
         def matcher_1_matches?
@@ -173,9 +173,9 @@ module RSpec
           def matcher_matches?(matcher)
             @match_results.fetch(matcher) do
               raise ArgumentError, "Your #{matcher.description} has no match " \
-               "results, this can occur when an unexpected call stack or " \
-               "local jump occurs. Perhaps one of your matchers needs to " \
-               "declare `expects_call_stack_jump?` as `true`?"
+                                   "results, this can occur when an unexpected call stack or " \
+                                   "local jump occurs. Perhaps one of your matchers needs to " \
+                                   "declare `expects_call_stack_jump?` as `true`?"
             end
           end
 
@@ -190,8 +190,8 @@ module RSpec
             Proc.new do |*inner_args|
               unless inner_args.empty?
                 raise ArgumentError, "(#{@matcher_1.description}) and " \
-                  "(#{@matcher_2.description}) cannot be combined in a compound expectation " \
-                  "since both matchers pass arguments to the block."
+                                     "(#{@matcher_2.description}) cannot be combined in a compound expectation " \
+                                     "since both matchers pass arguments to the block."
               end
 
               @actual.call(*outer_args)
@@ -229,8 +229,8 @@ module RSpec
             return @matcher_2, @matcher_1 unless self.class.matcher_expects_call_stack_jump?(@matcher_1)
 
             raise ArgumentError, "(#{@matcher_1.description}) and " \
-              "(#{@matcher_2.description}) cannot be combined in a compound expectation " \
-              "because they both expect a call stack jump."
+                                 "(#{@matcher_2.description}) cannot be combined in a compound expectation " \
+                                 "because they both expect a call stack jump."
           end
 
           # rubocop:disable Lint/IneffectiveAccessModifier

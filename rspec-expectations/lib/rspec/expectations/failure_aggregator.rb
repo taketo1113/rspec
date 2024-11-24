@@ -144,7 +144,7 @@ module RSpec
       # @return [String] A summary of the failure, including the block label and a count of failures.
       def summary
         "Got #{exception_count_description} from failure aggregation " \
-        "block#{block_description}"
+          "block#{block_description}"
       end
 
       # return [String] A description of the failure/error counts.

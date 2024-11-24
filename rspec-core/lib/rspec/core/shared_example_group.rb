@@ -149,8 +149,8 @@ module RSpec
       class Registry
         def add(context, name, *metadata_args, &block)
           unless block
-            RSpec.warning "Shared example group #{name} was defined without a "\
-                          "block and will have no effect. Please define a "\
+            RSpec.warning "Shared example group #{name} was defined without a " \
+                          "block and will have no effect. Please define a " \
                           "block or remove the definition."
           end
 

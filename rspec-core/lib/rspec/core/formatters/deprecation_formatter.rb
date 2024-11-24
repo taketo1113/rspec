@@ -58,15 +58,15 @@ module RSpec
         EOS
 
         DEPRECATION_STREAM_NOTICE = "Pass `--deprecation-out` or set " \
-          "`config.deprecation_stream` to a file for full output."
+                                    "`config.deprecation_stream` to a file for full output."
         TOO_MANY_WARNINGS_NOTICE  = "Too many similar deprecation messages " \
-          "reported, disregarding further reports. #{DEPRECATION_STREAM_NOTICE}"
+                                    "reported, disregarding further reports. #{DEPRECATION_STREAM_NOTICE}"
 
         # @private
         SpecifiedDeprecationMessage = Struct.new(:type) do
           def initialize(data)
             @message = data.message
-            super deprecation_type_for(data)
+            super(deprecation_type_for(data))
           end
 
           def to_s
@@ -94,7 +94,7 @@ module RSpec
         GeneratedDeprecationMessage = Struct.new(:type) do
           def initialize(data)
             @data = data
-            super data.deprecated
+            super(data.deprecated)
           end
 
           def to_s

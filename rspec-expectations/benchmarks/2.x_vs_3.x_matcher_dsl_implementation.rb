@@ -56,7 +56,7 @@ Benchmark.benchmark do |bm|
     bm.report do
       n.times do |j|
         begin
-          expect(1 + i * j).to matcher
+          expect(1 + (i * j)).to matcher
         rescue RSpec::Expectations::ExpectationNotMetError
         end
       end

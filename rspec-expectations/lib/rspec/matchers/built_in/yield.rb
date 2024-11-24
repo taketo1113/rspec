@@ -278,8 +278,8 @@ module RSpec
 
           unless (match = all_args_match?)
             @positive_args_failure = 'yielded with unexpected arguments' \
-              "\nexpected: #{surface_descriptions_in(@expected).inspect}" \
-              "\n     got: #{@actual_formatted}"
+                                     "\nexpected: #{surface_descriptions_in(@expected).inspect}" \
+                                     "\n     got: #{@actual_formatted}"
           end
 
           match
@@ -324,13 +324,13 @@ module RSpec
         # @private
         def failure_message
           'expected given block to yield successively with arguments, ' \
-          "but #{positive_failure_reason}"
+            "but #{positive_failure_reason}"
         end
 
         # @private
         def failure_message_when_negated
           'expected given block not to yield successively with arguments, ' \
-          "but #{negative_failure_reason}"
+            "but #{negative_failure_reason}"
         end
 
         # @private
@@ -358,16 +358,16 @@ module RSpec
           return 'was not a block' unless @probe.has_block?
 
           'yielded with unexpected arguments' \
-          "\nexpected: #{surface_descriptions_in(@expected).inspect}" \
-          "\n     got: [#{@actual_formatted.join(", ")}]"
+            "\nexpected: #{surface_descriptions_in(@expected).inspect}" \
+            "\n     got: [#{@actual_formatted.join(", ")}]"
         end
 
         def negative_failure_reason
           return 'was not a block' unless @probe.has_block?
 
           'yielded with expected arguments' \
-          "\nexpected not: #{surface_descriptions_in(@expected).inspect}" \
-          "\n         got: [#{@actual_formatted.join(", ")}]"
+            "\nexpected not: #{surface_descriptions_in(@expected).inspect}" \
+            "\n         got: [#{@actual_formatted.join(", ")}]"
         end
       end
     end

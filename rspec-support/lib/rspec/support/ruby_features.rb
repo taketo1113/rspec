@@ -171,8 +171,8 @@ module RSpec
       else
         # RBX / JRuby et al support is unknown for keyword arguments
         begin
-          eval("o = Object.new; def o.m(a: 1); end;"\
-               " raise SyntaxError unless o.method(:m).parameters.include?([:key, :a])")
+          eval("o = Object.new; def o.m(a: 1); end; " \
+               "raise SyntaxError unless o.method(:m).parameters.include?([:key, :a])")
 
           def kw_args_supported?
             true
@@ -184,7 +184,7 @@ module RSpec
         end
 
         begin
-          eval("o = Object.new; def o.m(a: ); end;"\
+          eval("o = Object.new; def o.m(a: ); end;" \
                "raise SyntaxError unless o.method(:m).parameters.include?([:keyreq, :a])")
 
           def required_kw_args_supported?

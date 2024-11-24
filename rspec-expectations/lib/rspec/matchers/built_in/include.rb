@@ -95,9 +95,9 @@ module RSpec
 
         def format_failure_message(preposition)
           msg = if actual.respond_to?(:include?)
-                  "expected #{description_of @actual} #{preposition}" \
-                  " include#{readable_list_of @divergent_items}" \
-                  "#{count_failure_reason('it is included') if has_expected_count?}"
+                  "expected #{description_of @actual} #{preposition} " \
+                    "include#{readable_list_of @divergent_items}" \
+                    "#{count_failure_reason('it is included') if has_expected_count?}"
                 else
                   "#{yield}, but it does not respond to `include?`"
                 end

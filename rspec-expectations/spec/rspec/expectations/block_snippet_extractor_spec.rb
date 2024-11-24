@@ -91,7 +91,9 @@ module RSpec::Expectations
 
       context 'with `target_method do body end`' do
         let(:expression) do
-          target_method do 1.positive? end
+          target_method do
+            1.positive?
+          end
         end
 
         it 'returns the body content lines' do

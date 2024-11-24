@@ -60,8 +60,8 @@ module RSpec
             when 0
               " but it does not respond to either `exist?` or `exists?`"
             when 2
-              " but `exist?` and `exists?` returned different values:\n\n"\
-              " exist?: #{existence_values.first}\n"\
+              " but `exist?` and `exists?` returned different values:\n\n " \
+              "exist?: #{existence_values.first}\n" \
               "exists?: #{existence_values.last}"
             end
           end

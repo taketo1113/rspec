@@ -10,7 +10,7 @@ module RSpec
       def check_for_tab_characters(filename)
         failing_lines = []
         File.readlines(filename).each_with_index do |line, number|
-          failing_lines << number + 1 if line =~ /\t/
+          failing_lines << (number + 1) if line =~ /\t/
         end
 
         return if failing_lines.empty?
@@ -21,7 +21,7 @@ module RSpec
         failing_lines = []
         File.readlines(filename).each_with_index do |line, number|
           next if line =~ /^\s+#.*\s+\n$/
-          failing_lines << number + 1 if line =~ /\s+\n$/
+          failing_lines << (number + 1) if line =~ /\s+\n$/
         end
 
         return if failing_lines.empty?

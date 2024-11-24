@@ -376,7 +376,8 @@ RSpec.describe "expect { ... }.to change { block }" do
 
   it "warns if passed a block using do/end instead of {}" do
     expect do
-      expect {}.to change do; end
+      expect {}.to change do
+      end
     end.to raise_error(SyntaxError, /Block not received by the `change` matcher/)
   end
 
@@ -439,7 +440,8 @@ RSpec.describe "expect { ... }.not_to change { block }" do
 
   it "warns if passed a block using do/end instead of {}" do
     expect do
-      expect {}.not_to change do; end
+      expect {}.not_to change do
+      end
     end.to raise_error(SyntaxError, /Block not received by the `change` matcher/)
   end
 

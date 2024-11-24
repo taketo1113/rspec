@@ -202,8 +202,8 @@ module RSpec
       # @private
       def raise_already_invoked_error(message, calling_customization)
         error_message = "The message expectation for #{intro}.#{message} has already been invoked " \
-          "and cannot be modified further (e.g. using `#{calling_customization}`). All message expectation " \
-          "customizations must be applied before it is used for the first time."
+                        "and cannot be modified further (e.g. using `#{calling_customization}`). All message expectation " \
+                        "customizations must be applied before it is used for the first time."
 
         notify MockExpectationAlreadyInvokedError.new(error_message)
       end
@@ -214,8 +214,8 @@ module RSpec
 
       def expectation_on_nil_message(method_name)
         "An expectation of `:#{method_name}` was set on `nil`. " \
-        "To allow expectations on `nil` and suppress this message, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil` to `true`. " \
-        "To disallow expectations on `nil`, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil` to `false`"
+          "To allow expectations on `nil` and suppress this message, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil` to `true`. " \
+          "To disallow expectations on `nil`, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil` to `false`"
       end
 
       # @private

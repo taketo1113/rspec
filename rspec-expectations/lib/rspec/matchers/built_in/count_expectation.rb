@@ -126,8 +126,8 @@ module RSpec
           when :twice then 2
           when :thrice then 3
           else
-            raise ArgumentError, "Expected a number, :once, :twice or :thrice," \
-              " but got #{n}"
+            raise ArgumentError, "Expected a number, :once, :twice or :thrice, " \
+                                 "but got #{n}"
           end
         end
 
@@ -143,8 +143,8 @@ module RSpec
         end
 
         def count_failure_reason(action)
-          "#{count_expectation_description}" \
-          " but #{action}#{human_readable_count(@actual_count)}"
+          "#{count_expectation_description} " \
+            "but #{action}#{human_readable_count(@actual_count)}"
         end
 
         def human_readable_expectation_type

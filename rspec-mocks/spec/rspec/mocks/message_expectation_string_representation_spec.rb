@@ -27,8 +27,8 @@ module RSpec
         end
 
         failure_message do |object|
-          "expected string representation: #{expected_representation}\n" \
-          " but got string representation: #{object.to_s}"
+          "expected string representation: #{expected_representation}\n " \
+            "but got string representation: #{object.to_s}"
         end
       end
     end

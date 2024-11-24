@@ -13,11 +13,11 @@ RSpec::Matchers.define :be_identical_string do |expected|
     end
 
     failure_message do
-      "expected\n#{actual.inspect} (#{actual.encoding.name}) to be identical to\n"\
-        "#{expected.inspect} (#{expected.encoding.name})\n"\
-        "The exact bytes are printed below for more detail:\n"\
-        "#{actual.bytes.to_a}\n"\
-        "#{expected.bytes.to_a}\n"\
+      "expected\n#{actual.inspect} (#{actual.encoding.name}) to be identical to\n" \
+        "#{expected.inspect} (#{expected.encoding.name})\n" \
+        "The exact bytes are printed below for more detail:\n" \
+        "#{actual.bytes.to_a}\n" \
+        "#{expected.bytes.to_a}\n" \
     end
 
     # Depends on chaining :with_same_encoding for it to

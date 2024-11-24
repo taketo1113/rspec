@@ -813,7 +813,7 @@ module RSpec
 
       def cannot_modify_further_error
         CannotModifyFurtherError.new "This method has already been configured " \
-          "to call the original implementation, and cannot be modified further."
+                                     "to call the original implementation, and cannot be modified further."
       end
     end
   end

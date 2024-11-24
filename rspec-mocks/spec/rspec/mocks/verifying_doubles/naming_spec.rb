@@ -14,9 +14,9 @@ module RSpec
       end
 
       failure_message do |actual|
-        "expected #{actual.inspect} to fail expectations as:\n" \
-          "  #{expected.inspect}, but failed with:\n" \
-          "  #{@error_message.inspect}"
+        "expected #{actual.inspect} to fail expectations as:\n  " \
+          "#{expected.inspect}, but failed with:\n  " \
+          "#{@error_message.inspect}"
       end
 
       match do |actual|

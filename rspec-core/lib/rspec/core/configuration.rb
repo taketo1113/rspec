@@ -168,10 +168,10 @@ module RSpec
       def deprecation_stream=(value)
         if @reporter && !value.equal?(@deprecation_stream)
           warn "RSpec's reporter has already been initialized with " \
-            "#{deprecation_stream.inspect} as the deprecation stream, so your change to "\
-            "`deprecation_stream` will be ignored. You should configure it earlier for " \
-            "it to take effect, or use the `--deprecation-out` CLI option. " \
-            "(Called from #{CallerFilter.first_non_rspec_line})"
+               "#{deprecation_stream.inspect} as the deprecation stream, so your change to " \
+               "`deprecation_stream` will be ignored. You should configure it earlier for " \
+               "it to take effect, or use the `--deprecation-out` CLI option. " \
+               "(Called from #{CallerFilter.first_non_rspec_line})"
         else
           @deprecation_stream = value
         end
@@ -224,9 +224,9 @@ module RSpec
 
           if value.to_i == 0
             # TODO: in RSpec 4, consider raising an error here.
-            RSpec.warning "Cannot set `RSpec.configuration.fail_fast`" \
-              " to `#{value.inspect}`. Only `true`, `false`, `nil` and integers" \
-              " are valid values."
+            RSpec.warning "Cannot set `RSpec.configuration.fail_fast` " \
+                          "to `#{value.inspect}`. Only `true`, `false`, `nil` and integers " \
+                          "are valid values."
             @fail_fast = true
           end
         end
@@ -274,9 +274,9 @@ module RSpec
       def output_stream=(value)
         if @reporter && !value.equal?(@output_stream)
           warn "RSpec's reporter has already been initialized with " \
-            "#{output_stream.inspect} as the output stream, so your change to "\
-            "`output_stream` will be ignored. You should configure it earlier for " \
-            "it to take effect. (Called from #{CallerFilter.first_non_rspec_line})"
+               "#{output_stream.inspect} as the output stream, so your change to " \
+               "`output_stream` will be ignored. You should configure it earlier for " \
+               "it to take effect. (Called from #{CallerFilter.first_non_rspec_line})"
         else
           @output_stream = value
           output_wrapper.output = @output_stream
@@ -437,8 +437,8 @@ module RSpec
           @shared_context_metadata_behavior = value
         else
           raise ArgumentError, "Cannot set `RSpec.configuration." \
-            "shared_context_metadata_behavior` to `#{value.inspect}`. Only " \
-            "`:trigger_inclusion` and `:apply_to_host_groups` are valid values."
+                               "shared_context_metadata_behavior` to `#{value.inspect}`. Only " \
+                               "`:trigger_inclusion` and `:apply_to_host_groups` are valid values."
         end
       end
 
@@ -506,10 +506,10 @@ module RSpec
       def bisect_runner=(value)
         if @bisect_runner_class && value != @bisect_runner
           raise "`config.bisect_runner = #{value.inspect}` can no longer take " \
-            "effect as the #{@bisect_runner.inspect} bisect runnner is already " \
-            "in use. This config setting must be set in a file loaded by a " \
-            "`--require` option (passed at the CLI or in a `.rspec` file) for " \
-            "it to have any effect."
+                "effect as the #{@bisect_runner.inspect} bisect runnner is already " \
+                "in use. This config setting must be set in a file loaded by a " \
+                "`--require` option (passed at the CLI or in a `.rspec` file) for " \
+                "it to have any effect."
         end
 
         @bisect_runner = value

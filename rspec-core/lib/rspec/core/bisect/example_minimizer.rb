@@ -123,7 +123,7 @@ module RSpec
 
           if @failed_example_ids.empty?
             raise BisectFailedError, "\n\nNo failures found. Bisect only works " \
-                  "in the presence of one or more failing examples."
+                                     "in the presence of one or more failing examples."
           else
             notify(:bisect_original_run_complete, :failed_example_ids => failed_example_ids,
                                                   :non_failing_example_ids => non_failing_example_ids,
@@ -160,8 +160,8 @@ module RSpec
           return if expected_order == results.all_example_ids
 
           raise BisectFailedError, "\n\nThe example ordering is inconsistent. " \
-                "`--bisect` relies upon consistent ordering (e.g. by passing " \
-                "`--seed` if you're using random ordering) to work properly."
+                                   "`--bisect` relies upon consistent ordering (e.g. by passing " \
+                                   "`--seed` if you're using random ordering) to work properly."
         end
 
         def notify(*args)

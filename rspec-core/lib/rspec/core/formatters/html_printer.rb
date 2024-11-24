@@ -29,8 +29,8 @@ module RSpec
         def print_example_passed(description, run_time)
           formatted_run_time = "%.5f" % run_time
           @output.puts "    <dd class=\"example passed\">" \
-            "<span class=\"passed_spec_name\">#{h(description)}</span>" \
-            "<span class='duration'>#{formatted_run_time}s</span></dd>"
+                       "<span class=\"passed_spec_name\">#{h(description)}</span>" \
+                       "<span class='duration'>#{formatted_run_time}s</span></dd>"
         end
 
         def print_example_failed(pending_fixed, description, run_time, failure_id,
@@ -52,8 +52,8 @@ module RSpec
 
         def print_example_pending(description, pending_message)
           @output.puts "    <dd class=\"example not_implemented\">" \
-            "<span class=\"not_implemented_spec_name\">#{h(description)} " \
-            "(PENDING: #{h(pending_message)})</span></dd>"
+                       "<span class=\"not_implemented_spec_name\">#{h(description)} " \
+                       "(PENDING: #{h(pending_message)})</span></dd>"
         end
 
         def print_summary(duration, example_count, failure_count, pending_count)
@@ -66,10 +66,10 @@ module RSpec
           formatted_duration = "%.5f" % duration
 
           @output.puts "<script type=\"text/javascript\">" \
-            "document.getElementById('duration').innerHTML = \"Finished in " \
-            "<strong>#{formatted_duration} seconds</strong>\";</script>"
+                       "document.getElementById('duration').innerHTML = \"Finished in " \
+                       "<strong>#{formatted_duration} seconds</strong>\";</script>"
           @output.puts "<script type=\"text/javascript\">" \
-            "document.getElementById('totals').innerHTML = \"#{totals}\";</script>"
+                       "document.getElementById('totals').innerHTML = \"#{totals}\";</script>"
           @output.puts "</div>"
           @output.puts "</div>"
           @output.puts "</body>"

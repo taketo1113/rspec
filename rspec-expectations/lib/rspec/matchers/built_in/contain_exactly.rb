@@ -13,7 +13,7 @@ module RSpec
             generate_failure_message
           else
             "expected a collection that can be converted to an array with " \
-            "`#to_ary` or `#to_a`, but got #{actual_formatted}"
+              "`#to_ary` or `#to_a`, but got #{actual_formatted}"
           end
         end
 

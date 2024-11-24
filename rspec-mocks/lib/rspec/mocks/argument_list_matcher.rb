@@ -100,11 +100,11 @@ module RSpec
       def ensure_expected_args_valid!
         if expected_args.count { |a| ArgumentMatchers::AnyArgsMatcher::INSTANCE == a } > 1
           raise ArgumentError, "`any_args` can only be passed to " \
-                "`with` once but you have passed it multiple times."
+                               "`with` once but you have passed it multiple times."
         elsif expected_args.count > 1 && expected_args.any? { |a| ArgumentMatchers::NoArgsMatcher::INSTANCE == a }
           raise ArgumentError, "`no_args` can only be passed as a " \
-                "singleton argument to `with` (i.e. `with(no_args)`), " \
-                "but you have passed additional arguments."
+                               "singleton argument to `with` (i.e. `with(no_args)`), " \
+                               "but you have passed additional arguments."
         end
       end
 

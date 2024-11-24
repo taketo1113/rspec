@@ -544,7 +544,7 @@ module RSpec
         RSpec::Matchers.generated_description
       rescue Support::AllExceptionsExceptOnesWeMustNotRescue => e
         location_description + " (Got an error when generating description " \
-          "from matcher: #{e.class}: #{e.message} -- #{e.backtrace.first})"
+                               "from matcher: #{e.class}: #{e.message} -- #{e.backtrace.first})"
       end
 
       def location_description

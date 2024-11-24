@@ -220,11 +220,11 @@ module RSpec
           end
 
           failure_message do |group_or_example|
-            "expected #{group_or_example.inspect}\n" \
-            "   to have id: #{expected_id}\n" \
-            "   but had id: #{group_or_example.id}\n" \
-            "   and have scoped id: #{scoped_id}\n" \
-            "   but had  scoped id: #{group_or_example.metadata[:scoped_id]}"
+            "expected #{group_or_example.inspect}\n   " \
+              "to have id: #{expected_id}\n   " \
+              "but had id: #{group_or_example.id}\n   " \
+              "and have scoped id: #{scoped_id}\n   " \
+              "but had  scoped id: #{group_or_example.metadata[:scoped_id]}"
           end
         end
 

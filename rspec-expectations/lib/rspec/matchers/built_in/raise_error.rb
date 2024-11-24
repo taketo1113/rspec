@@ -191,7 +191,7 @@ module RSpec
                          "will match when Ruby raises a `NoMethodError`, `NameError` or " \
                          "`ArgumentError`, potentially allowing the expectation to pass " \
                          "without even executing the method you are intending to call. " \
-                         "#{warning}"\
+                         "#{warning}" \
                          "Instead consider providing a specific error class or message. " \
                          "This message can be suppressed by setting: " \
                          "`RSpec::Expectations.configuration.on_potential_false" \
@@ -204,7 +204,7 @@ module RSpec
                          "will match when Ruby raises a `NoMethodError`, `NameError` or " \
                          "`ArgumentError`, potentially allowing the expectation to pass " \
                          "without even executing the method you are intending to call. " \
-                         "#{warning}"\
+                         "#{warning}" \
                          "Instead consider providing a specific error class or message. " \
                          "This message can be suppressed by setting: " \
                          "`RSpec::Expectations.configuration.on_potential_false" \

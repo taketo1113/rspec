@@ -14,11 +14,11 @@ Gem::Specification.new do |s|
   s.description = "BDD for Ruby. RSpec runner and example groups."
 
   s.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/rspec/rspec-core/issues',
-    'changelog_uri'     => "https://github.com/rspec/rspec-core/blob/v#{s.version}/Changelog.md",
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec-core/issues',
+    'changelog_uri' => "https://github.com/rspec/rspec-core/blob/v#{s.version}/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
-    'mailing_list_uri'  => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri'   => 'https://github.com/rspec/rspec-core',
+    'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
+    'source_code_uri' => 'https://github.com/rspec/rspec-core',
   }
 
   s.files            = `git ls-files -- lib/*`.split("\n")

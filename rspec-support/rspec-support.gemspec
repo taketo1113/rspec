@@ -1,4 +1,5 @@
 # coding: utf-8
+
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rspec/support/version'
@@ -14,11 +15,11 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/rspec/rspec-support/issues',
-    'changelog_uri'     => "https://github.com/rspec/rspec-support/blob/v#{spec.version}/Changelog.md",
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec-support/issues',
+    'changelog_uri' => "https://github.com/rspec/rspec-support/blob/v#{spec.version}/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
-    'mailing_list_uri'  => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri'   => 'https://github.com/rspec/rspec-support',
+    'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
+    'source_code_uri' => 'https://github.com/rspec/rspec-support',
   }
 
   spec.files         = `git ls-files -- lib/*`.split("\n")

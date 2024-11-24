@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.description = "rspec-expectations provides a simple, readable API to express expected outcomes of a code example."
 
   s.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/rspec/rspec-expectations/issues',
-    'changelog_uri'     => "https://github.com/rspec/rspec-expectations/blob/v#{s.version}/Changelog.md",
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec-expectations/issues',
+    'changelog_uri' => "https://github.com/rspec/rspec-expectations/blob/v#{s.version}/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
-    'mailing_list_uri'  => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri'   => 'https://github.com/rspec/rspec-expectations',
+    'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
+    'source_code_uri' => 'https://github.com/rspec/rspec-expectations',
   }
 
   s.files            = `git ls-files -- lib/*`.split("\n")

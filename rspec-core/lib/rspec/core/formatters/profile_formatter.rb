@@ -31,8 +31,8 @@ module RSpec
 
         def dump_profile_slowest_examples(profile)
           @output.puts "\nTop #{profile.slowest_examples.size} slowest " \
-            "examples (#{Helpers.format_seconds(profile.slow_duration)} " \
-            "seconds, #{profile.percentage}% of total time):\n"
+                       "examples (#{Helpers.format_seconds(profile.slow_duration)} " \
+                       "seconds, #{profile.percentage}% of total time):\n"
 
           profile.slowest_examples.each do |example|
             @output.puts "  #{example.full_description}"

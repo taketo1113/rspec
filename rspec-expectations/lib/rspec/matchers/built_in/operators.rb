@@ -57,7 +57,7 @@ module RSpec
             define_method(negative_operator) do |_expected|
               opposite_should = ::RSpec::Matchers.last_expectation_handler.opposite_should_method
               raise "RSpec does not support `#{::RSpec::Matchers.last_expectation_handler.should_method} #{negative_operator} expected`.  " \
-                "Use `#{opposite_should} #{operator} expected` instead."
+                    "Use `#{opposite_should} #{operator} expected` instead."
             end
           end
         end

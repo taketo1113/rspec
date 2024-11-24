@@ -804,7 +804,7 @@ module RSpec
       #   RSpec's built-in formatters.
       def description
         @description ||= "Shared Example Group: #{shared_group_name.inspect} " \
-          "called from #{formatted_inclusion_location}"
+                         "called from #{formatted_inclusion_location}"
       end
 
       # @private
