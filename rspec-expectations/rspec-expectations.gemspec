@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     'documentation_uri' => 'https://rspec.info/documentation/',
     'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
     'source_code_uri' => 'https://github.com/rspec/rspec-expectations',
+    'rubygems_mfa_required' => 'true',
   }
 
   s.files            = `git ls-files -- lib/*`.split("\n")
