@@ -37,7 +37,4 @@ Gem::Specification.new do |spec|
   end
 
   spec.required_ruby_version = '>= 1.8.7'
-
-  spec.add_development_dependency "rake",         "> 10.0.0"
-  spec.add_development_dependency "thread_order", "~> 1.1.0"
 end
