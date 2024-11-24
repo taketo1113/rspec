@@ -28,7 +28,10 @@ module RSpec::Core
       end
 
       it 'successfully invokes the block' do
-        RSpec.describe("group") { it "example 1" do; end}
+        RSpec.describe("group") do
+          it "example 1" do
+          end
+        end
         example = RSpec.world.example_groups.first.examples.first
         expect(example.metadata[:new_key]).to eq(:new_value)
       end
@@ -165,10 +168,12 @@ module RSpec::Core
           expect(config.deprecation_stream).to equal(value)
         end
 
+        # rubocop:disable Lint/SelfAssignment
         it 'does not print a warning if set to the value it already has' do
           config.deprecation_stream = config.deprecation_stream
           expect(config).not_to have_received(:warn)
         end
+        # rubocop:enable Lint/SelfAssignment
       end
     end
 
@@ -201,10 +206,12 @@ module RSpec::Core
           expect(config.output_stream).to eq($stdout)
         end
 
+        # rubocop:disable Lint/SelfAssignment
         it 'does not print a warning if set to the value it already has' do
           config.output_stream = config.output_stream
           expect(config).not_to have_received(:warn)
         end
+        # rubocop:enable Lint/SelfAssignment
       end
     end
 

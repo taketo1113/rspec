@@ -75,7 +75,7 @@ RSpec.describe 'Failed spec rerun location' do
           rspec './local_shared_examples_spec.rb[1:1:1:2:1]' #  the first context behaves like a failing spec when you reverse it still fails
           rspec './local_shared_examples_spec.rb[1:2:1:1]' #  the second context behaves like a failing spec fails
           rspec './local_shared_examples_spec.rb[1:2:1:2:1]' #  the second context behaves like a failing spec when you reverse it still fails
-        EOS
+      EOS
     end
 
     context "and the shared examples are defined in a separate file" do
