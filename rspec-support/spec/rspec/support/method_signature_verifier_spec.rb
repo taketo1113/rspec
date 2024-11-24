@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support'
 require 'rspec/support/method_signature_verifier'
 

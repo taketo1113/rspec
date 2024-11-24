@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark/ips'
 
 def use_map_and_hash_bracket(input)

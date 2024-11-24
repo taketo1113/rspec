@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "expect(regex).to match(string).with_captures" do
   context "with a string target" do
     it "does match a regex with a missing capture" do

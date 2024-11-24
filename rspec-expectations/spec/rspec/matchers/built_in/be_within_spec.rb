@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     RSpec.describe "expect(actual).to be_within(delta).of(expected)" do

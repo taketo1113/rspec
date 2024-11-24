@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'tempfile'
 
 RSpec.describe 'isolating code to a sub process' do

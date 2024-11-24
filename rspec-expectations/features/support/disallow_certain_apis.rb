@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is designed to prevent the use of certain APIs that
 # we don't want used from our cukes, since they function as documentation.
 

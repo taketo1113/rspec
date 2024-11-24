@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   RSpec.describe Matchers, "aliases", :order => :defined do
     matcher :be_aliased_to do |old_matcher|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     # Provides a base class with as little methods as possible, so that

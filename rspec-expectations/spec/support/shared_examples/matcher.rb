@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples "an RSpec matcher" do |options|
   # Note: do not use `matcher` in 2 expectation expressions in a single
   # example here. In some cases (such as `change { }.to(2)`), it will fail

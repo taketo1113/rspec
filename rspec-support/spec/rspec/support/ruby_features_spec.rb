@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/ruby_features'
 
 module RSpec

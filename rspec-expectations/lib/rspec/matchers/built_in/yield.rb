@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/matchers/built_in/count_expectation'
 
 RSpec::Support.require_rspec_support 'method_signature_verifier'

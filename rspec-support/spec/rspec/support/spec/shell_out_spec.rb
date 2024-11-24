@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/spec/shell_out'
 
 RSpec.describe RSpec::Support::ShellOut, :slow do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Around "@skip-when-splat-args-unsupported" do |scenario, block|
   require 'rspec/support/ruby_features'
 

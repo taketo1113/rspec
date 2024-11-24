@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     # @api private
@@ -7,7 +9,7 @@ module RSpec
       # @private
       # Default diff label when there is only one matcher in diff
       # output
-      DEFAULT_DIFF_LABEL = "Diff:".freeze
+      DEFAULT_DIFF_LABEL = "Diff:"
 
       # @private
       # Maximum readable matcher description length

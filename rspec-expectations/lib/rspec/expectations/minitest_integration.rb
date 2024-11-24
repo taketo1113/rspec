@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/expectations'
 
 Minitest::Test.class_eval do

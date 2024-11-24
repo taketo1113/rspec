@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark/ips'
 
 [10, 100, 1000, 10_000, 100_000].each do |array_size|

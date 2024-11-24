@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "expect(...).to match(expected)" do
   include RSpec::Support::Spec::DiffHelpers
 

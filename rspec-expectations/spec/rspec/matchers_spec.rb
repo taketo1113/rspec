@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 main = self
 RSpec.describe RSpec::Matchers do
   include ::RSpec::Support::InSubProcess

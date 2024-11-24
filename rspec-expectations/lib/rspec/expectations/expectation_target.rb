@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Expectations
     # Wraps the target of an expectation.

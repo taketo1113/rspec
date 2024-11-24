@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'diff-lcs'
 
 Around "@skip-when-diff-lcs-1.4" do |scenario, block|

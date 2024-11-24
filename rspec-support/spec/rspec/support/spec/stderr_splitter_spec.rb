@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/spec/stderr_splitter'
 require 'tempfile'
 require 'rspec/support/spec/in_sub_process'

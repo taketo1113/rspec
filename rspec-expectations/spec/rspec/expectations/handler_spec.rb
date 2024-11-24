@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ExampleExpectations
   class ArbitraryMatcher
     def initialize(*args, &block)

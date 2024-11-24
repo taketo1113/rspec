@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'a matcher is expected to be able to have its description generated' do
   after(:example) do
     RSpec::Matchers.clear_generated_description

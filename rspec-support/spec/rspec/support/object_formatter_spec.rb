@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/object_formatter'
 require 'rspec/matchers/fail_matchers'
 

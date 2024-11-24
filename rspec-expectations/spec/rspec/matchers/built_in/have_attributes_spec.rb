@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "#have_attributes matcher" do
   include RSpec::Support::Spec::DiffHelpers
 

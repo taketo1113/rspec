@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Object, "#should" do
   before(:example) do
     @target = "target"

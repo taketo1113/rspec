@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples "an RSpec block-only matcher" do |*options|
   # Note: Ruby 1.8 expects you to call a block with arguments if it is
   # declared that accept arguments. In this case, some of the specs

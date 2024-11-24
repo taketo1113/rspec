@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     # Facilitates converting ruby objects to English phrases.

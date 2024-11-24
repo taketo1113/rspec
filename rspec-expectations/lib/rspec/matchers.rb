@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support'
 RSpec::Support.require_rspec_support 'matcher_definition'
 RSpec::Support.define_optimized_require_for_rspec(:matchers) { |f| require_relative(f) }

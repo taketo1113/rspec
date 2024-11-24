@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module YieldHelpers
   # these helpers are prefixed with an underscore to prevent
   # collisions with the matchers (some of which have the same names)

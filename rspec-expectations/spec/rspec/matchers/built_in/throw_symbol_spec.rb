@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec::Matchers::BuiltIn
   RSpec.describe ThrowSymbol do
     it_behaves_like "an RSpec block-only matcher" do

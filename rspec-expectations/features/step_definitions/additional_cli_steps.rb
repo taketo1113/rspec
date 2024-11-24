@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Useful for when the output is slightly different on different versions of ruby
 Then(/^the output should contain "([^"]*)" or "([^"]*)"$/) do |string1, string2|
   unless [string1, string2].any? { |s| all_output.include?(s) }

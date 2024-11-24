@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/caller_filter'
 
 eval <<-EOS, binding, "/lib/rspec/core/some_file.rb", 1 # make it think this code is in rspec-core

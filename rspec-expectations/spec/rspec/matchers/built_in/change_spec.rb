@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SomethingExpected
   attr_accessor :some_value
 end

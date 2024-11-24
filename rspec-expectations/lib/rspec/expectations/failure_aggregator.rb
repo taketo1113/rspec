@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Expectations
     # @private
@@ -194,7 +196,7 @@ module RSpec
 
         # It changes the current path that is relative to
         # system root to be relative to the project root.
-        line.sub(/(\A|\s)#{File.expand_path('.')}(#{File::SEPARATOR}|\s|\Z)/, '\\1.\\2'.freeze).sub(/\A([^:]+:\d+)$/, '\\1'.freeze)
+        line.sub(/(\A|\s)#{File.expand_path('.')}(#{File::SEPARATOR}|\s|\Z)/, '\\1.\\2').sub(/\A([^:]+:\d+)$/, '\\1')
       end
 
       def enumerated_failures

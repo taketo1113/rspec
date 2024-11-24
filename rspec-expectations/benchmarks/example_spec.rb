@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe "something" do
   it "does something that passes" do
     1.should eq(1)

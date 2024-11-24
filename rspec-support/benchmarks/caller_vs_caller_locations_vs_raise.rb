@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This benchmark arose from rspec/rspec-support#199 where we experimented with
 # faster ways of generating / capturing a backtrace and whether it made sense
 # to lazily generate it using `raise` to capture the backtrace via an exception.

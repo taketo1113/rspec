@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec::Support.require_rspec_matchers "built_in/base_matcher"
 
 module RSpec

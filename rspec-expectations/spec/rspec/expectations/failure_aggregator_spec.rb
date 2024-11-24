@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec::Expectations
   RSpec.describe FailureAggregator, "when used via `aggregate_failures`" do
     it 'does not raise an error when no expectations fail' do

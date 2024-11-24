@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark/ips'
 
 def create_stack_trace(n, &block)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UnsortableObject
   def initialize(id)
     @id = id

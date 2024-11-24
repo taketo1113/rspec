@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This class fakes some behavior of
 # ActiveSupport::HashWithIndifferentAccess.
 # It doesn't convert recursively.

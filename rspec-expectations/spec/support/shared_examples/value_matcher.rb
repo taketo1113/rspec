@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples "an RSpec value matcher" do |options|
   let(:valid_value)   { options.fetch(:valid_value) }
   let(:invalid_value) { options.fetch(:invalid_value) }

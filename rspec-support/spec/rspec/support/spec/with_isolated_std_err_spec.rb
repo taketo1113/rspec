@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/spec'
 
 RSpec.describe 'isolating a spec from the stderr splitter' do

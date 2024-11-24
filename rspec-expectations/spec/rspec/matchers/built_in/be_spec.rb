@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "expect(...).to be_predicate" do
   it "passes when actual returns true for :predicate?" do
     actual = double("actual", :happy? => true)

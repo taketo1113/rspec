@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec::Support.require_rspec_support "with_keywords_when_needed"
 
 module RSpec

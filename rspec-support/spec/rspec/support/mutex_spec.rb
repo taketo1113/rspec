@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/mutex'
 
 RSpec.describe RSpec::Support::Mutex do

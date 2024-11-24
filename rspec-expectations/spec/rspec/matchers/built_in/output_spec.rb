@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples "output_to_stream" do |stream_name, matcher_method, helper_module|
   include helper_module
   extend helper_module

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support/recursive_const_methods'
 
 module RSpec

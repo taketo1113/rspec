@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     # Decorator that wraps a matcher and overrides `description`

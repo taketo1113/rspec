@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 
 %w[rspec rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/support'
 require 'rspec/support/spec/library_wide_checks'
 

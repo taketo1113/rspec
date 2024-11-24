@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "expect(...).to satisfy { block }" do
   it_behaves_like "an RSpec value matcher", :valid_value => true, :invalid_value => false do
     let(:matcher) { satisfy { |v| v } }

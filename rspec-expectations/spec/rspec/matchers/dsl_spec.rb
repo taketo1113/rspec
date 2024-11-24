@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "a matcher defined using the matcher DSL" do
   def question?
     :answer

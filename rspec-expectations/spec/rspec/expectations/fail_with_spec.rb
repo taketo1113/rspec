@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe RSpec::Expectations, "#fail_with" do
   let(:differ) { double("differ") }
 

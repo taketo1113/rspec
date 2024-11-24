@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark/ips'
 require 'rspec/support'
 require 'rspec/support/with_keywords_when_needed'

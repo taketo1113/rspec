@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe "expect { ... }.to raise_error" do
   it_behaves_like "an RSpec block-only matcher" do
     def valid_block

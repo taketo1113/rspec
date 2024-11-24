@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     RSpec.describe 'RSpec::Matchers.define_negated_matcher' do

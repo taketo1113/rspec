@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/matchers/built_in/count_expectation'
 
 module RSpec

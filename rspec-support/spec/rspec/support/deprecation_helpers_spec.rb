@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rspec/matchers/fail_matchers'
 
 RSpec.describe RSpecHelpers do

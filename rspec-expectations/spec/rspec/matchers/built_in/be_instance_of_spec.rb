@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RSpec
   module Matchers
     [:be_an_instance_of, :be_instance_of].each do |method|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'benchmark'
 
 n = 10_000_000
