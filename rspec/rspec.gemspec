@@ -15,17 +15,17 @@ Gem::Specification.new do |s|
   s.description = "BDD for Ruby"
 
   s.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/rspec/rspec-metagem/issues',
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec-metagem/issues',
     'documentation_uri' => 'https://rspec.info/documentation/',
-    'mailing_list_uri'  => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri'   => 'https://github.com/rspec/rspec-metagem',
+    'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
+    'source_code_uri' => 'https://github.com/rspec/rspec-metagem',
   }
 
   s.files            = `git ls-files -- lib/*`.split("\n")
   s.files           += ["LICENSE.md"]
   s.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
-  s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.extra_rdoc_files = [ "README.md" ]
+  s.executables      = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.extra_rdoc_files = ["README.md"]
   s.rdoc_options     = ["--charset=UTF-8"]
   s.require_path     = "lib"
 
