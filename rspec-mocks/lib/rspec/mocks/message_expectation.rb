@@ -400,6 +400,9 @@ module RSpec
       end
       alias inspect to_s
 
+      # Implementation details is a long module
+      # rubocop:disable Metrics/ModuleLength
+
       # @private
       # Contains the parts of `MessageExpectation` that aren't part of
       # rspec-mocks' public API. The class is very big and could really use
@@ -699,6 +702,7 @@ module RSpec
 
       include ImplementationDetails
     end
+    # rubocop:enable Metrics/ModuleLength
 
     # Handles the implementation of an `and_yield` declaration.
     # @private
