@@ -1,16 +1,19 @@
 ### Development
-[Full Changelog](http://github.com/rspec/rspec-support/compare/v3.13.1...main)
+[Full Changelog](http://github.com/rspec/rspec/compare/rspec-support-v3.13.2...main)
 
 Enchancements
 
 * Improve diff for `anything` matchers by hiding the value "anything" is matched
   against. (Karl Heitmann, rspec/rspec-mocks#599)
 
+
+### 3.13.2 / 2024-12-02
+[Full Changelog](http://github.com/rspec/rspec/compare/rspec-support-v3.13.1...rspec-support-v3.13.2)
+
 Bug Fixes:
 
 * Prevent recursive calls to stubbed methods during stub invocation.
   (James Dabbs, rspec/rspec#116)
-
 
 ### 3.13.1 / 2024-02-23
 [Full Changelog](http://github.com/rspec/rspec-support/compare/v3.13.0...v3.13.1)
