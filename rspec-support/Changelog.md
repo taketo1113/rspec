@@ -4,7 +4,13 @@
 Enchancements
 
 * Improve diff for `anything` matchers by hiding the value "anything" is matched
-  against. (Karl Heitmann, #599)
+  against. (Karl Heitmann, rspec/rspec-mocks#599)
+
+Bug Fixes:
+
+* Prevent recursive calls to stubbed methods during stub invocation.
+  (James Dabbs, rspec/rspec#116)
+
 
 ### 3.13.1 / 2024-02-23
 [Full Changelog](http://github.com/rspec/rspec-support/compare/v3.13.0...v3.13.1)
