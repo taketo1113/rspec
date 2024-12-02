@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
     'changelog_uri' => "https://github.com/rspec/rspec-support/blob/v#{spec.version}/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
     'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri' => 'https://github.com/rspec/rspec-support',
+    'source_code_uri' => 'https://github.com/rspec/rspec',
     'rubygems_mfa_required' => 'true',
   }
 
