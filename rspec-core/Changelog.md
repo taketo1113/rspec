@@ -1,5 +1,5 @@
 ### Development
-[Full Changelog](http://github.com/rspec/rspec-core/compare/v3.13.2...main)
+[Full Changelog](https://github.com/rspec/rspec/compare/rspec-core-v3.13.2...main)
 
 Enhancements:
 
