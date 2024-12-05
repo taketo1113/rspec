@@ -9,16 +9,16 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.authors     = ["Steven Baker", "David Chelimsky", "Myron Marston"]
   s.email       = "rspec@googlegroups.com"
-  s.homepage    = "https://github.com/rspec/rspec-mocks"
+  s.homepage    = "https://rspec.info"
   s.summary     = "rspec-mocks-#{RSpec::Mocks::Version::STRING}"
   s.description = "RSpec's 'test double' framework, with support for stubbing and mocking"
 
   s.metadata = {
-    'bug_tracker_uri' => 'https://github.com/rspec/rspec-mocks/issues',
-    'changelog_uri' => "https://github.com/rspec/rspec-mocks/blob/v#{s.version}/Changelog.md",
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec/issues',
+    'changelog_uri' => "https://github.com/rspec/rspec/tree/rspec-mocks-v#{s.version}/rspec-mocks/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
     'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri' => 'https://github.com/rspec/rspec',
+    'source_code_uri' => "https://github.com/rspec/rspec/tree/rspec-mocks-v#{s.version}/rspec-mocks",
     'rubygems_mfa_required' => 'true',
   }
 

@@ -2,10 +2,10 @@
 
 This is the detailed readme for `rspec-expectations`, see also:
 
-* [The combined readme][../README.md]
-* [rspec-core][../rspec-core/README.md]
-* [rspec-mocks][../rspec-mocks/README.md]
-* [rspec-support][../rspec-support/README.md]
+* [The combined readme](../README.md)
+* [rspec-core](../rspec-core/README.md)
+* [rspec-mocks](../rspec-mocks/README.md)
+* [rspec-support](../rspec-support/README.md)
 
 ## Basic usage
 
@@ -193,7 +193,7 @@ actual.should be > 3
 [1, 2, 3].should_not include 4
 ```
 
-See [detailed information on the `should` syntax and its usage.](https://github.com/rspec/rspec-expectations/blob/main/Should.md)
+See [detailed information on the `should` syntax and its usage.](https://github.com/rspec/rspec/blob/main/rspec-expectations/Should.md)
 
 ## Compound Matcher Expressions
 

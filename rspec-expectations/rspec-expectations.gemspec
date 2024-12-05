@@ -10,16 +10,16 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.authors     = ["Steven Baker", "David Chelimsky", "Myron Marston"]
   s.email       = "rspec@googlegroups.com"
-  s.homepage    = "https://github.com/rspec/rspec-expectations"
+  s.homepage    = "https://rspec.info"
   s.summary     = "rspec-expectations-#{RSpec::Expectations::Version::STRING}"
   s.description = "rspec-expectations provides a simple, readable API to express expected outcomes of a code example."
 
   s.metadata = {
-    'bug_tracker_uri' => 'https://github.com/rspec/rspec-expectations/issues',
-    'changelog_uri' => "https://github.com/rspec/rspec-expectations/blob/v#{s.version}/Changelog.md",
+    'bug_tracker_uri' => 'https://github.com/rspec/rspec/issues',
+    'changelog_uri' => "https://github.com/rspec/rspec/tree/rspec-expectations-v#{s.version}/rspec-expectations/Changelog.md",
     'documentation_uri' => 'https://rspec.info/documentation/',
     'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri' => 'https://github.com/rspec/rspec',
+    'source_code_uri' => "https://github.com/rspec/rspec/tree/rspec-expectations-v#{s.version}/rspec-expectations",
     'rubygems_mfa_required' => 'true',
   }
 

@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.authors     = ["Steven Baker", "David Chelimsky", "Myron Marston"]
   s.email       = "rspec@googlegroups.com"
-  s.homepage    = "http://github.com/rspec"
+  s.homepage    = "https://rspec.info"
   s.summary     = "rspec-#{RSpec::Version::STRING}"
   s.description = "BDD for Ruby"
 
@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
     'bug_tracker_uri' => 'https://github.com/rspec/rspec/issues',
     'documentation_uri' => 'https://rspec.info/documentation/',
     'mailing_list_uri' => 'https://groups.google.com/forum/#!forum/rspec',
-    'source_code_uri' => 'https://github.com/rspec/rspec',
+    'source_code_uri' => "https://github.com/rspec/rspec/tree/rspec-metagem-v#{s.version}",
     'rubygems_mfa_required' => 'true',
   }
 
