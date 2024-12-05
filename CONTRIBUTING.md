@@ -51,19 +51,15 @@ change for on `rspec-mocks`. We add a commit with the title:
 
 And content:
 
-```diff
-diff --git a/Gemfile b/Gemfile
-
--%w[rspec rspec-core rspec-mocks rspec-support].each do |lib|
-+%w[rspec rspec-core rspec-support].each do |lib|
-   library_path = File.expand_path("../../#{lib}", __FILE__)
-   if File.exist?(library_path) && !ENV['USE_GIT_REPOS']
-     gem lib, :path => library_path
-@@ -11,6 +11,7 @@ branch = File.read(File.expand_path("../maintenance-branch", __FILE__)).chomp
-     gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => branch
-   end
- end
-+gem 'rspec-mocks', :git => "https://github.com/rspec/rspec-mocks.git", :branch => "custom-failure-message"
+```ruby
+%w[rspec rspec-core rspec-expectations rspec-support].each do |lib|
+  if lib == 'rspec'
+    gem lib, git: "https://github.com/rspec/rspec"
+  else
+    gem lib, git: "https://github.com/rspec/rspec", glob: "#{lib}/#{lib}.gemspec"
+  end
+end
+gem 'rspec-mocks', git: "https://github.com/my_user_name/rspec", branch: 'your-custom-branch', glob: "rspec-mocks/rspec-mocks.gemspec"
 ```
 
 In general the process is:
