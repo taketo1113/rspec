@@ -5,7 +5,7 @@ Enchancements
 
 * Improve diff for `anything` matchers by hiding the value "anything" is matched
   against. (Karl Heitmann, rspec/rspec-mocks#599)
-  
+
 Bug Fixes:
 
 * Switch current thread data to alias/accessors to avoid issues with mocked systems.
