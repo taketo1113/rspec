@@ -13,4 +13,8 @@ function run_specs_one_by_one {
   done
 }
 
-run_specs_one_by_one
+if is_mri; then
+  run_specs_one_by_one
+else
+  echo "Skipping the one by one specs on non-MRI rubies"
+fi
