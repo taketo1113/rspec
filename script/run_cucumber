@@ -1,5 +1,9 @@
 set -e
 
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+SCRIPT_DIR="${ROOT_DIR}/script"
+source $SCRIPT_DIR/functions.sh
+
 if [ -d features ]; then
   if is_mri; then
     bundle exec cucumber --strict
