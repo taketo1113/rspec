@@ -50,3 +50,22 @@ jobs:
       - run: ../script/run_rspec
       - run: ../script/run_rspec_one_by_one
       - run: ../script/run_cucumber
+
+  windows:
+    name: Ruby ${{ matrix.ruby }} (Windows)
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        ruby:
+          - '3.3'
+          - 2.7
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler: '2.2.22'
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - run: choco install ansicon
+      - run: bundle exec rspec --backtrace
