@@ -1,13 +1,16 @@
-name: Run Rubocop
-on:
-  workflow_call:
+name: Run RuboCop
+on: workflow_call
 
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   rubocop:
-    name: Rubocop
+    name: RuboCop
     runs-on: 'ubuntu-20.04'
     steps:
       - uses: actions/checkout@v4
