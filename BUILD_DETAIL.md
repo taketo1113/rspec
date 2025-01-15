@@ -2,19 +2,13 @@
 
 The [CI build](https://github.com/rspec/rspec/actions)
 runs many verification steps to prevent regressions and
-ensure high-quality code. To run the build locally, run:
+ensure high-quality code.
 
-```
-$ script/run_build
-```
-
-It can be useful to run the build steps individually
-to repro a failing part of a build. Let's break
-the build down into the individual steps.
+Let's look at the individual steps we run:
 
 ## Specs
 
-RSpec dogfoods itself. Its primary defense against regressions is its spec suite. Run with:
+RSpec dogfoods itself. The primary defense against regressions is its spec suite. Run with:
 
 ```
 $ bundle exec rspec
@@ -42,7 +36,7 @@ In addition, we use [SimpleCov](https://github.com/colszowka/simplecov)
 to measure and enforce test coverage. If the coverage falls below a
 project-specific threshold, the build will fail.
 
-## Cukes
+## Cucumber scenarios
 
 RSpec uses [cucumber](https://cucumber.io/) for both acceptance testing
 and [documentation](https://rspec.info/documentation). Since we publish our cukes
@@ -136,9 +130,6 @@ runs RSpec via `bin/rspec` rather than `bundle exec rspec`.
 
 While each of the RSpec repos is an independent gem (generally designed
 to be usable on its own), there are interdependencies between the gems,
-and the specs for each tend to use features from the other gems. We
-don't want to merge a pull request for one repo that might break the
-build for another repo, so our CI build includes a spec that runs the
-spec suite of each of the _other_ project repos. Note that we only run
-the spec suite, not the full build, of the other projects, as the spec
-suite runs very quickly compared to the full build.
+and the specs for each tend to use features from the other gems. With
+the monorepo we now always use the latest versions of each gem when running
+CI for PRs so don't forget to run the specs for the other gems too.
