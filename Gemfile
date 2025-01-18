@@ -54,14 +54,6 @@ else
 end
 # rubocop:enable Lint/DuplicateBranch
 
-if RUBY_VERSION.to_f > 3.3
-  gem 'cucumber', :git => 'https://github.com/cucumber/cucumber-ruby', :branch => 'main'
-elsif RUBY_VERSION < '2.0.0'
-  gem 'cucumber', "<= 1.3.22"
-else
-  gem 'cucumber', ">= 1.3"
-end
-
 if ENV['DIFF_LCS_VERSION']
   gem 'diff-lcs', ENV['DIFF_LCS_VERSION']
 else
