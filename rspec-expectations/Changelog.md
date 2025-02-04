@@ -6,7 +6,7 @@ Enhancements:
 * Improve the IO emulation in the output capture matchers (`output(...).to_stdout` et al)
   by adding `as_tty` and `as_not_tty` to change the `tty?` flags. (Sergio Gil Pérez de la Manga, rspec/rspec-expectations#1459)
 * Improve the error message when using constraints with a negated `change` matcher.
-  (Qingyu Chai, #177)
+  (Qingyu Chai, rspec/rspec#177)
 
 ### 3.13.3 / 2024-09-07
 [Full Changelog](http://github.com/rspec/rspec-expectations/compare/v3.13.2...v3.13.3)
