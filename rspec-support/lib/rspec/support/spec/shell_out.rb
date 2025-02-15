@@ -82,6 +82,8 @@ module RSpec
           # Ignore some JRuby errors for gems
           %r{jruby/\d\.\d(\.\d)?/gems/aruba},
           %r{jruby/\d\.\d(\.\d)?/gems/ffi},
+          # Ignore errors from asdf
+          %r{\.asdf/installs},
         ]
 
       def strip_known_warnings(input)
