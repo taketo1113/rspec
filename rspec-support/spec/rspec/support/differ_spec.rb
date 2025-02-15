@@ -18,7 +18,7 @@ module RSpec
           actual   = "foo\nbar\nzap\nthis\nis\nsoo\nvery\nvery\nequal\ninsert\na\nline\n"
 
           if Diff::LCS::VERSION.to_f < 1.4 || Diff::LCS::VERSION >= "1.4.4"
-            expected_diff = dedent(<<-'EOD')
+            expected_diff = dedent(<<-"EOD")
               |
               |
               |@@ -1,6 +1,6 @@
@@ -29,7 +29,7 @@ module RSpec
               | this
               | is
               | soo
-              |@@ -9,6 +9,5 @@
+              |@@ #{::Diff::LCS::VERSION.to_f > 1.5 ? "-9,5 +9,4" : "-9,6 +9,5"} @@
               | equal
               | insert
               | a
@@ -67,7 +67,7 @@ module RSpec
           actual   = "foo\nbar\nzap\nthis\nis\nsoo\nvery\nvery\nequal\ninsert\na\nline\n"
 
           if Diff::LCS::VERSION.to_f < 1.4 || Diff::LCS::VERSION >= "1.4.4"
-            expected_diff = dedent(<<-'EOS')
+            expected_diff = dedent(<<-"EOS")
               |
               |
               |@@ -1,6 +1,6 @@
@@ -78,7 +78,7 @@ module RSpec
               | this
               | is
               | soo
-              |@@ -9,6 +9,5 @@
+              |@@ #{::Diff::LCS::VERSION.to_f > 1.5 ? "-9,5 +9,4" : "-9,6 +9,5"} @@
               | equal
               | insert
               | a
@@ -199,9 +199,9 @@ module RSpec
           expected = animal_class.new "bob", "giraffe"
           actual   = animal_class.new "bob", "tortoise"
 
-          expected_diff = dedent(<<-'EOD')
+          expected_diff = dedent(<<-"EOD")
             |
-            |@@ -1,5 +1,5 @@
+            |@@ #{one_line_header(5)} @@
             | <Animal
             |   name=bob,
             |-  species=tortoise
@@ -218,10 +218,10 @@ module RSpec
           expected = [ :foo, 'bar', :baz, 'quux', :metasyntactic, 'variable', :delta, 'charlie', :width, 'quite wide' ]
           actual   = [ :foo, 'bar', :baz, 'quux', :metasyntactic, 'variable', :delta, 'tango'  , :width, 'very wide'  ]
 
-          expected_diff = dedent(<<-'EOD')
+          expected_diff = dedent(<<-"EOD")
             |
             |
-            |@@ -5,7 +5,7 @@
+            |@@ #{::Diff::LCS::VERSION.to_f > 1.5 ? "-5,6 +5,6" : "-5,7 +5,7"} @@
             |  :metasyntactic,
             |  "variable",
             |  :delta,
@@ -426,9 +426,9 @@ module RSpec
           expected = "this is:\n  one string"
           actual   = "this is:\n  another string"
 
-          expected_diff = dedent(<<-'EOD')
+          expected_diff = dedent(<<-"EOD")
             |
-            |@@ -1,3 +1,3 @@
+            |@@ #{one_line_header(3)} @@
             | this is:
             |-  another string
             |+  one string
@@ -566,9 +566,9 @@ module RSpec
             actual = { :fixed => "fixed", :trigger => "trigger", :anything_key => "bcdd0399-1cfe-4de1-a481-ca6b17d41ed8" }
             expected = { :fixed => "fixed", :trigger => "wrong", :anything_key => anything }
             diff = differ.diff(actual, expected)
-            expected_diff = dedent(<<-'EOD')
+            expected_diff = dedent(<<-"EOD")
               |
-              |@@ -1,4 +1,4 @@
+              |@@ #{one_line_header(4)} @@
               | :anything_key => anything,
               | :fixed => "fixed",
               |-:trigger => "wrong",
