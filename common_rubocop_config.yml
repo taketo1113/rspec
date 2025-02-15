@@ -117,6 +117,10 @@ Lint/NestedMethodDefinition:
 Lint/RescueException:
   Enabled: true
 
+# A new cop introduced but not yet fixed... please fix me.
+Lint/UselessConstantScoping:
+  Enabled: false
+
 # Warns when the class is excessively long.
 Metrics/ClassLength:
   Max: 100

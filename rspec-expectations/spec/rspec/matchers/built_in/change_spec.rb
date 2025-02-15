@@ -248,7 +248,6 @@ RSpec.describe "expect { ... }.to change ..." do
   context "with an arbitrary enumerable" do
     before(:example) do
       @instance = SomethingExpected.new
-      # rubocop:disable Layout/EmptyLinesAroundArguments This is a RuboCop bug, and it's fixed in 0.65.0
       @instance.some_value = Class.new do
         include Enumerable
 
@@ -274,7 +273,6 @@ RSpec.describe "expect { ... }.to change ..." do
           elements.hash
         end
       end.new
-      # rubocop:enable Layout/EmptyLinesAroundArguments
     end
 
     it "passes when actual is modified by the block" do
