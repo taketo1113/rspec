@@ -5,6 +5,7 @@ AllCops:
   Exclude:
     - bin/*
     - bundle/**/*
+    - rspec-support/lib/rspec/support/mutex.rb
   NewCops:
     enable
   SuggestExtensions: false
