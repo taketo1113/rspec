@@ -14,6 +14,8 @@ end
 group :documentation do
   gem 'github-markup', :platform => :mri
   gem 'redcarpet', :platform => :mri
+  # Webrick extracted from Ruby 3.0.0, required by Yard
+  gem 'webrick', '~> 1.9.1', :require => false if RUBY_VERSION >= '3.0.0'
   gem 'yard', '~> 0.9.24', :require => false
 end
 
