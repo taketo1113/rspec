@@ -204,6 +204,7 @@ module RSpec
       # @private
       # @macro [attach] define_example_group_method
       #   @!scope class
+      #   @method $1
       #   @overload $1
       #   @overload $1(&example_group_definition)
       #     @param example_group_definition [Block] The definition of the example group.
@@ -312,6 +313,11 @@ module RSpec
       # @private
       # @macro [attach] define_nested_shared_group_method
       #   @!scope class
+      #   @method $1(name, *args, &block)
+      #     @param name [String, Symbol] The name of the shared group to include.
+      #     @param args [Array] Pass parameters to a shared example group
+      #     @param block [Block] Additional context to pass to the shared group.
+      #     @return [void]
       #
       #   @see SharedExampleGroup
       def self.define_nested_shared_group_method(new_name, report_label="it should behave like")
