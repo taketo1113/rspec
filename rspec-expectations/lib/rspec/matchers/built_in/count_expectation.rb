@@ -65,7 +65,7 @@ module RSpec
         else
           # :nocov:
           def cover?(count, number)
-            number >= count.first && number <= count.last
+            number >= count.first && number <= count.last # rubocop:disable Style/ComparableBetween
           end
           # :nocov:
         end
