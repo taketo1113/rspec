@@ -208,12 +208,19 @@ module RSpec
       # Configures RSpec to check predicate matchers to `be(true)` / `be(false)` (strict),
       # or `be_truthy` / `be_falsey` (not strict).
       # Historically, the default was `false`, but `true` is recommended.
-      def strict_predicate_matchers=(flag)
-        raise ArgumentError, "Pass `true` or `false`" unless flag == true || flag == false
-        @strict_predicate_matchers = flag
-      end
-
+      #
+      # @overload strict_predicate_matchers
+      #   @return [Boolean]
+      # @overload strict_predicate_matchers?
+      #   @return [Boolean]
+      # @overload strict_predicate_matchers=(value)
+      #   @param [Boolean] value
       attr_reader :strict_predicate_matchers
+
+      def strict_predicate_matchers=(value)
+        raise ArgumentError, "Pass `true` or `false`" unless value == true || value == false
+        @strict_predicate_matchers = value
+      end
 
       def strict_predicate_matchers?
         @strict_predicate_matchers
