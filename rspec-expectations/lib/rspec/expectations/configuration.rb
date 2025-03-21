@@ -187,15 +187,13 @@ module RSpec
         end
       end
 
-      # Configuration for RSpec behaviour with matcher use that might result in false positives.
+      # Configures what RSpec will do about matcher use which would potentially cause
+      # false positives in tests. Defaults to `:warn` since this is generally the desired behavior,
+      # but can also be set to `:raise` or `:nothing`.
+      #
       # @overload on_potential_false_positives
-      #   Indicates how RSpec handles potential false positives in tests (default: `:warn`;
-      #   options: `:warn`, `:raise`, `:nothing`)
       #   @return [Symbol] the behavior setting
       # @overload on_potential_false_positives=(value)
-      #   Configures what RSpec will do about matcher use which would potentially
-      #   cause false positives in tests. Defaults to `:warn` since this is generally
-      #   the desired behavior.
       #   @param [Symbol] behavior can be set to `:warn`, `:raise` or `:nothing`
       #   @return [Symbol] the behavior setting
       attr_reader :on_potential_false_positives
