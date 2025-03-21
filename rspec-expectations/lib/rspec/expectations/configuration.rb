@@ -4,6 +4,8 @@ RSpec::Support.require_rspec_expectations "syntax"
 
 module RSpec
   module Expectations
+    # rubocop:disable Metrics/ClassLength
+
     # Provides configuration options for rspec-expectations.
     # If you are using rspec-core, you can access this via a
     # block passed to `RSpec::Core::Configuration#expect_with`.
@@ -252,5 +254,7 @@ module RSpec
 
     # set default syntax
     configuration.reset_syntaxes_to_default
+
+    # rubocop:enable Metrics/ClassLength
   end
 end
