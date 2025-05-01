@@ -1,5 +1,5 @@
 ### Development
-[Full Changelog](https://github.com/rspec/rspec/compare/rspec-expectations-v3.13.3...main)
+[Full Changelog](https://github.com/rspec/rspec/compare/rspec-expectations-v3.13.4...main)
 
 Enhancements:
 
@@ -7,6 +7,8 @@ Enhancements:
   by adding `as_tty` and `as_not_tty` to change the `tty?` flags. (Sergio Gil Pérez de la Manga, rspec/rspec-expectations#1459)
 * Improve the error message when using constraints with a negated `change` matcher.
   (Qingyu Chai, rspec/rspec#177)
+
+### 3.13.4 / 2025-05-01
 
 Bug Fixes:
 
