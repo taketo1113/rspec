@@ -11,6 +11,13 @@ Bug Fixes:
 * Switch current thread data to alias/accessors to avoid issues with mocked systems.
   (Jon Rowe, #610)
 
+### 3.13.4
+[Full Changelog](http://github.com/rspec/rspec/compare/rspec-support-v3.13.3...rspec-support-v3.13.4)
+
+Bug Fixes:
+
+* Fix homepage link in gemspec. (Jon Rowe)
+
 ### 3.13.3 / 2025-04-30
 [Full Changelog](http://github.com/rspec/rspec/compare/rspec-support-v3.13.2...rspec-support-v3.13.3)
 
