@@ -31,6 +31,7 @@ Bug Fixes:
   (Jon Rowe, rspec/rspec-expectations#1485)
 
 ### 3.13.2 / 2024-08-20
+[Full Changelog](http://github.com/rspec/rspec-expectations/compare/v3.13.1...v3.13.2)
 
 Bug Fixes:
 
