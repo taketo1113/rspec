@@ -185,6 +185,10 @@ Style/CollectionMethods:
   PreferredMethods:
     reduce: 'inject'
 
+# Revisit in RSpec 4
+Style/CollectionQuerying:
+  Enabled: false
+
 # Revisit in RSpec 4, we generally don't push
 Style/ConcatArrayLiterals:
   Enabled: false
