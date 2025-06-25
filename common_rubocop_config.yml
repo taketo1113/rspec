@@ -147,9 +147,13 @@ Naming/ConstantName:
 Naming/HeredocDelimiterNaming:
   Enabled: false
 
+# We return booleans from commands which are not predicates
+Naming/PredicateMethod:
+  Enabled: false
+
 # We have too many special cases where we allow generator methods or prefer a
 # prefixed predicate due to it's improved readability.
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: false
 
 Naming/VariableNumber:
@@ -180,6 +184,10 @@ Style/ClassCheck:
 Style/CollectionMethods:
   PreferredMethods:
     reduce: 'inject'
+
+# Revisit in RSpec 4
+Style/CollectionQuerying:
+  Enabled: false
 
 # Revisit in RSpec 4, we generally don't push
 Style/ConcatArrayLiterals:
