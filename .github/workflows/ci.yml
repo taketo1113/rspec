@@ -3,8 +3,8 @@ name: RSpec CI
 on:
   push:
     branches:
-      - 'main'
-      - '*-maintenance'
+      #- 'main'
+      #- '*-maintenance'
   pull_request:
     branches:
       - '*'
@@ -14,31 +14,37 @@ permissions:
 
 jobs:
   docs:
-    uses: rspec/rspec/.github/workflows/documentation_coverage.yml@main
+    #uses: rspec/rspec/.github/workflows/documentation_coverage.yml@main
+    uses: taketo1113/rspec/.github/workflows/documentation_coverage.yml@main
 
   rubocop:
-    uses: rspec/rspec/.github/workflows/rubocop.yml@main
+    #uses: rspec/rspec/.github/workflows/rubocop.yml@main
+    uses: taketo1113/rspec/.github/workflows/rubocop.yml@main
 
   core:
-    uses: rspec/rspec/.github/workflows/rspec.yml@main
+    #uses: rspec/rspec/.github/workflows/rspec.yml@main
+    uses: taketo1113/rspec/.github/workflows/rspec.yml@main
     with:
       library: 'rspec-core'
       rspec_version: '= 3.14.0.pre'
 
   mocks:
-    uses: rspec/rspec/.github/workflows/rspec.yml@main
+    #uses: rspec/rspec/.github/workflows/rspec.yml@main
+    uses: taketo1113/rspec/.github/workflows/rspec.yml@main
     with:
       library: 'rspec-mocks'
       rspec_version: '= 3.14.0.pre'
 
   expectations:
-    uses: rspec/rspec/.github/workflows/rspec.yml@main
+    #uses: rspec/rspec/.github/workflows/rspec.yml@main
+    uses: taketo1113/rspec/.github/workflows/rspec.yml@main
     with:
       library: 'rspec-expectations'
       rspec_version: '= 3.14.0.pre'
 
   support:
-    uses: rspec/rspec/.github/workflows/rspec.yml@main
+    #uses: rspec/rspec/.github/workflows/rspec.yml@main
+    uses: taketo1113/rspec/.github/workflows/rspec.yml@main
     with:
       library: 'rspec-support'
       rspec_version: '= 3.14.0.pre'
