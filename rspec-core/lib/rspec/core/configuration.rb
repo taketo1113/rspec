@@ -1818,6 +1818,7 @@ module RSpec
       def expose_current_running_example_as(method_name)
         ExposeCurrentExample.module_exec do
           extend RSpec::SharedContext
+
           let(method_name) { |ex| ex }
         end
 

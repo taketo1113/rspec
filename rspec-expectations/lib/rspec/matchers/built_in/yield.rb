@@ -102,6 +102,7 @@ module RSpec
       # Not intended to be instantiated directly.
       class YieldControl < BaseMatcher
         include CountExpectation
+
         # @private
         def matches?(block)
           @probe = YieldProbe.probe(block)

@@ -32,6 +32,7 @@ module RSpec
     # @private
     class MatcherDelegator < BaseDelegator
       include Composable
+
       attr_reader :base_matcher
 
       def initialize(base_matcher)

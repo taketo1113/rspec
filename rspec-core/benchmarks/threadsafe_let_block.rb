@@ -65,6 +65,7 @@ class HostBase
   def self.prepare_using(memoized_helpers, options={})
     include memoized_helpers
     extend memoized_helpers::ClassMethods
+
     memoized_helpers.define_helpers_on(self)
 
     define_method(:initialize, &options[:initialize]) if options[:initialize]
@@ -82,6 +83,7 @@ class HostBase
     # Since we're using custom code, ensure it actually memoizes as we expect...
     counter_class = Class.new(self) do
       include RSpec::Matchers
+
       memoized_helpers.define_helpers_on(self)
       counter = 0
       let(:count) { counter += 1 }

@@ -6,6 +6,7 @@ module RSpec
       # @private
       class HtmlPrinter
         include ERB::Util # For the #h method.
+
         def initialize(output)
           @output = output
         end

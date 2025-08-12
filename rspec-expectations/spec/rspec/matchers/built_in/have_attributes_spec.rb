@@ -235,6 +235,7 @@ RSpec.describe "#have_attributes matcher" do
   end
 
   include RSpec::Matchers::Composable
+
   # a helper for failure message assertion
   def object_inspect(object)
     surface_descriptions_in object.inspect

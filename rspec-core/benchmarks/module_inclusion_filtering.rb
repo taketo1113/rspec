@@ -36,6 +36,7 @@ end
 
 RSpec::Core::Configuration.class_eval do
   prepend RSpecConfigurationOverrides
+
   alias new_configure_group configure_group
 end
 

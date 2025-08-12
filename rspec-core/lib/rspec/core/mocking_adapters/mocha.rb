@@ -34,11 +34,13 @@ module RSpec
         end
 
         # Mocha::Standalone was deprecated as of Mocha 0.9.7.
+        # rubocop:disable Layout/EmptyLinesAfterModuleInclusion
         begin
           include ::Mocha::API
         rescue NameError
           include ::Mocha::Standalone
         end
+        # rubocop:enable Layout/EmptyLinesAfterModuleInclusion
 
         def setup_mocks_for_rspec
           mocha_setup
