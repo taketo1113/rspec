@@ -297,6 +297,7 @@ module RSpec::Matchers::DSL
       let(:matcher) do
         new_matcher(:be_a_greeting) do
           include MatcherHelperModule
+
           match { |actual| actual == greeting }
         end
       end
@@ -1112,6 +1113,7 @@ module RSpec::Matchers::DSL
       matcher = new_matcher(:ignore, 3) do |expected|
         match do |actual|
           extend RSpec::Matchers
+
           expect(actual).to eql(5 + expected)
         end
       end
@@ -1168,6 +1170,7 @@ module RSpec::Matchers::DSL
         let(:matcher) do
           new_matcher(:equal, 4) do |expected|
             include mod
+
             match_unless_raises UnexpectedError do
               assert_equal expected, actual
             end

@@ -24,6 +24,7 @@ end
 
 module ArubaLoader
   extend RSpec::Support::WithIsolatedStdErr
+
   with_isolated_stderr do
     require 'aruba/api'
   end
@@ -32,6 +33,7 @@ end
 RSpec.shared_context "aruba support" do
   include Aruba::Api
   include RSpecHelpers
+
   let(:stderr) { StringIO.new }
   let(:stdout) { StringIO.new }
 

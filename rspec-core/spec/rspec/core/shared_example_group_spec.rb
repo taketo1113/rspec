@@ -10,6 +10,7 @@ module RSpec
   module Core
     RSpec.describe SharedExampleGroup do
       include RSpec::Support::InSubProcess
+
       let(:registry) { RSpec.world.shared_example_group_registry }
 
       ExampleModule = Module.new

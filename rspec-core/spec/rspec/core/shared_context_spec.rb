@@ -14,6 +14,7 @@ RSpec.describe RSpec::SharedContext do
     after_all_hook = false
     shared = Module.new do
       extend RSpec::SharedContext
+
       before(:all) { before_all_hook = true }
       before(:each) { before_each_hook = true }
       after(:each)  { after_each_hook = true }
@@ -21,6 +22,7 @@ RSpec.describe RSpec::SharedContext do
     end
     group = RSpec.describe do
       include shared
+
       example { }
     end
 
@@ -57,6 +59,7 @@ RSpec.describe RSpec::SharedContext do
   it "supports let" do
     shared = Module.new do
       extend RSpec::SharedContext
+
       let(:foo) { 'foo' }
     end
     group = RSpec.describe do
@@ -69,10 +72,12 @@ RSpec.describe RSpec::SharedContext do
   it 'supports overriding let without warnings' do
     shared = Module.new do
       extend RSpec::SharedContext
+
       let(:foo) { 'foo' }
     end
     group = RSpec.describe do
       include shared
+
       let(:foo) { 'bar' }
     end
 
@@ -82,6 +87,7 @@ RSpec.describe RSpec::SharedContext do
   it "supports let when applied to an individual example via metadata" do
     shared = Module.new do
       extend RSpec::SharedContext
+
       let(:foo) { "bar" }
     end
 
@@ -99,6 +105,7 @@ RSpec.describe RSpec::SharedContext do
   it 'supports explicit subjects' do
     shared = Module.new do
       extend RSpec::SharedContext
+
       subject { 17 }
     end
 
@@ -113,6 +120,7 @@ RSpec.describe RSpec::SharedContext do
     it "supports nested example groups using #{method_name}" do
       shared = Module.new do
         extend RSpec::SharedContext
+
         send(method_name, "nested using describe") do
           example {}
         end

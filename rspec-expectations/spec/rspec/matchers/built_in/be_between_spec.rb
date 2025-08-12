@@ -4,6 +4,7 @@ module RSpec::Matchers::BuiltIn
   RSpec.describe BeBetween do
     class SizeMatters
       include Comparable
+
       attr_reader :str
       def <=>(other)
         str.size <=> other.str.size

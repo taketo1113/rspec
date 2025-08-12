@@ -102,6 +102,7 @@ module RSpec
       it "works with custom measure objects" do
         weight_class = Struct.new(:val) do
           include Comparable
+
           def <=>(other); val <=> other.val; end
           def -(other); self.class.new(val - other.val); end
           def abs; self.class.new(val.abs); end

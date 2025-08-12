@@ -23,11 +23,13 @@ module RSpec::Matchers
 
     context "when RSpec::Matchers has been included in an example group" do
       include RSpec::Matchers
+
       it_behaves_like "a normal module with a method that supers"
     end
 
     context "when a module that includes RSpec::Matchers has been included in an example group" do
       include RSpec::Matchers::ModThatIncludesMatchers
+
       it_behaves_like "a normal module with a method that supers"
     end
 

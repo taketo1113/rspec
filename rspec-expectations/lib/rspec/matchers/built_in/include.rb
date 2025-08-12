@@ -10,6 +10,7 @@ module RSpec
       # Not intended to be instantiated directly.
       class Include < BaseMatcher # rubocop:disable Metrics/ClassLength
         include CountExpectation
+
         # @private
         attr_reader :expecteds
 

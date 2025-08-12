@@ -141,7 +141,13 @@ module RSpec
         end
 
         it "handles stubbing prepended methods" do
-          klass = Class.new { prepend ToBePrepended; def value; :original; end }
+          klass =
+            Class.new do
+              prepend ToBePrepended
+
+              def value; :original; end
+            end
+
           instance = klass.new
           expect(instance.value).to eq :original_prepended
           allow(instance).to receive(:value) { :stubbed }
@@ -178,6 +184,7 @@ module RSpec
         it 'does not unnecessarily prepend a module when stubbing a method on a module extended onto itself' do
           mod = Module.new do
             extend self
+
             def foo; :bar; end
           end
 
@@ -336,6 +343,7 @@ module RSpec
           # itself
           mod = Module.new {
             extend self
+
             def hello; :hello; end
 
             private :hello

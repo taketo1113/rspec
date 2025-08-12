@@ -84,6 +84,7 @@ module RSpec::Matchers::BuiltIn
           let(:non_block_matcher) do
             Class.new do
               include ::RSpec::Matchers::Composable
+
               def matches?(*); true; end
             end.new
           end

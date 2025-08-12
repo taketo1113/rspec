@@ -473,6 +473,7 @@ module RSpec
             class << self
               # See `Macros#define_user_override` above, for an explanation.
               include(@user_method_defs = Module.new)
+
               self
             end
           RSpec::Support::WithKeywordsWhenNeeded.class_exec(klass, *expected, &declarations)
